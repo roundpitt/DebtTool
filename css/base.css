@@ -1,0 +1,15 @@
+body {
+	margin: 0; 
+}
+img.coin {
+    width: 25px;
+    margin-bottom: -5px;
+}
+.coinText {
+	font-size: 23px;
+	bottom: 10px;
+	display: inline;
+}
+[ng-bind-html] {
+    display: inline;
+}

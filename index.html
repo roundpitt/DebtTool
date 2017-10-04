@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZombieFest</title>
+  <link href="css/animations.css" rel="stylesheet" type="text/css">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/common.css" rel="stylesheet" type="text/css">
+
+
+  <!--<link href="css/base.css" rel="stylesheet" type="text/css">-->
+  <!--<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>-->
+  <script src="js/googleCharts.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/framework/angular.js"></script>
+  <script src="js/framework/angular-route.min.js"></script>
+  <script src="js/framework/angular-animate.min.js"></script>
+  <script src="js/module.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/filter.js"></script>
+  
+
+
+  <base href="/" />
+</head>
+<body ng-app="app">
+  <div ng-controller="MainCtrl as main">
+
+  <div class="view-container" ng-style="{height: windowHeight + 'px'}" set-height>
+    <div ng-view class="view-animate"></div>
+  </div>
+
+
+<!--
+  <hr />
+  <pre>$location.path() = {{main.$location.path()}}</pre>
+  <pre>$route.current.templateUrl = {{main.$route.current.templateUrl}}</pre>
+  <pre>$route.current.params = {{main.$route.current.params}}</pre>
+  <pre>$routeParams = {{main.$routeParams}}</pre>
+  -->
+</div>
+</body>
+</html>

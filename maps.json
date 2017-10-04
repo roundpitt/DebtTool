@@ -1,0 +1,274 @@
+{
+	"maps": [
+		{
+			"mapId": "eastValaria",
+			"mapSubText": "Eastern Valaria",
+			"nodes": [
+				{
+					"id": 0,
+					"xPerc": 2,
+					"yPerc": 2,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 8,
+					"yPerc": 8,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 3,
+					"xPerc": 11,
+					"yPerc": 11,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 4,
+					"xPerc": 14,
+					"yPerc": 14,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 5,
+					"xPerc": 17,
+					"yPerc": 17,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 6,
+					"xPerc": 20,
+					"yPerc": 20,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 7,
+					"xPerc": 23,
+					"yPerc": 23,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 8,
+					"xPerc": 26,
+					"yPerc": 26,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 9,
+					"xPerc": 29,
+					"yPerc": 29,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 10,
+					"xPerc": 32,
+					"yPerc": 32,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 11,
+					"xPerc": 35,
+					"yPerc": 35,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 12,
+					"xPerc": 38,
+					"yPerc": 38,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 13,
+					"xPerc": 41,
+					"yPerc": 41,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 14,
+					"xPerc": 44,
+					"yPerc": 44,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 15,
+					"xPerc": 47,
+					"yPerc": 47,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 16,
+					"xPerc": 47,
+					"yPerc": 47,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 17,
+					"xPerc": 50,
+					"yPerc": 50,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 18,
+					"xPerc": 53,
+					"yPerc": 53,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 19,
+					"xPerc": 56,
+					"yPerc": 56,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 20,
+					"xPerc": 59,
+					"yPerc": 59,
+					"adjacentNodeId": [1]
+				}
+			]
+		},
+		{
+			"mapId": "parrumCity",
+			"mapSubText": "City of Parrum",
+			"nodes": [{
+					"id": 0,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 15,
+					"yPerc": 15,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 25,
+					"yPerc": 25,
+					"adjacentNodeId": [1]
+				}
+			]
+		},
+		{
+			"mapId": "MelkamVillage",
+			"mapSubText": "Village of Melkam",
+			"nodes": [{
+					"id": 0,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 15,
+					"yPerc": 15,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 25,
+					"yPerc": 25,
+					"adjacentNodeId": [1]
+				}
+			]
+		},
+		{
+			"mapId": "durnReach",
+			"mapSubText": "Durn's Reach",
+			"nodes": [{
+					"id": 0,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 15,
+					"yPerc": 15,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 25,
+					"yPerc": 25,
+					"adjacentNodeId": [1]
+				}
+			]
+		},
+		{
+			"mapId": "falkHold",
+			"mapSubText": "Falk Hold",
+			"nodes": [{
+					"id": 0,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 15,
+					"yPerc": 15,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 25,
+					"yPerc": 25,
+					"adjacentNodeId": [1]
+				}
+			]
+		},
+		{
+			"mapId": "cityParrum",
+			"mapSubText": "Village of Parrum",
+			"nodes": [{
+					"id": 0,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 15,
+					"yPerc": 15,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 25,
+					"yPerc": 25,
+					"adjacentNodeId": [1]
+				}
+			]
+		},
+		{
+			"mapId": "cityParrum",
+			"mapSubText": "Village of Parrum",
+			"nodes": [{
+					"id": 0,
+					"xPerc": 5,
+					"yPerc": 5,
+					"adjacentNodeId": [1]
+				},
+				{
+					"id": 1,
+					"xPerc": 15,
+					"yPerc": 15,
+					"adjacentNodeId": [0, 2]
+				},
+				{
+					"id": 2,
+					"xPerc": 25,
+					"yPerc": 25,
+					"adjacentNodeId": [1]
+				}
+			]
+		}
+	]
+}

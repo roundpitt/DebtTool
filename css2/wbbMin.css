@@ -1,0 +1,271 @@
+
+html {
+    background:#369 url('/Images2/wrapper/bg_fade.png') repeat-x;
+    background-position-y: -1px !important; 
+}
+
+
+body {
+    background: none;
+}
+   
+a{color:#369; text-decoration:none;}
+a:visited{color:#369; text-decoration:none;}
+a:hover{color:#036; text-decoration:underline;}
+
+/* 10px */
+#topLinks li a, 
+#smallTopLinks li a,
+div.lastSignOn,
+#footer {
+    font-size: 10px;
+}
+
+/* 12px */
+#mainNav li a,
+#subNavigation {
+    font-size: 12px;
+}
+
+/* 13px */
+#mainNav li.sel a {
+    font-size: 13px;
+}
+
+/* Legacy PNC Styles (Header, nav, footer) */
+
+#mainNav li a, #subNavigation li a .navWrapper {font-family:"Trebuchet MS","Arial",sans-serif;}
+
+#header{margin:5px auto 0 auto; background:url('/Images2/wrapper/topHeader_bg.png') no-repeat; height:100px; width:970px;}
+div.top{height:65px;}
+
+#topLinks, #smallTopLinks{float:right; margin:5px 25px 0 0; padding:0;}
+#topLinks ul, #smallTopLinks ul{margin:0; padding:0; float:right;}
+#topLinks li, #smallTopLinks li{list-style:none; float:left;}
+#topLinks li a, #smallTopLinks li a{display:block; width:80px; height:22px; color:#444; padding:3px 0 0 0; text-align:center; font-weight:bold; text-decoration:none;}
+#topLinks li.left a, #smallTopLinks li.left a{background:url('/Images2/navSprite.png') 0 -160px no-repeat;}
+#topLinks li.left a:hover, #smallTopLinks li.left a:hover{background:url('/Images2/navSprite.png') -85px -160px no-repeat; color:#333;}
+#topLinks li.mid a, #smallTopLinks li.mid a{background:url('/Images2/navSprite.png') -170px -160px no-repeat;}
+#topLinks li.mid a:hover, #smallTopLinks li.mid a:hover{background:url('/Images2/navSprite.png') 0 -185px no-repeat; color:#333;}
+#topLinks li.right a, #smallTopLinks li.right a{background:url('/Images2/navSprite.png') -85px -185px no-repeat;}
+#topLinks li.right a:hover, #smallTopLinks li.right a:hover{background:url('/Images2/navSprite.png') -170px -185px no-repeat; color:#333;}
+#topLinks li.single a, #smallTopLinks li.single a{background:url('/Images2/navSprite.png') 0 -210px no-repeat;}
+#topLinks li.single a:hover, #smallTopLinks li.single a:hover{background:url('/Images2/navSprite.png') -85px -210px no-repeat; color:#333;}
+
+#pncLink{float:left; margin:15px 0 0 30px;}
+#pncLink a{display:block; width:275px; height:40px;}
+
+div.lastSignOn{clear:both; color:#666; text-align:right;}
+
+#mainNav{margin:0 30px;}
+#mainNav ul{margin:0; padding:0;}
+#mainNav li{list-style:none; padding:0; margin:0; float:left;}
+#mainNav li a{display:block; width:130px; font-weight:bold; text-align:center; padding:15px 0 0 0; height:35px; text-decoration:none; color:#fff;}
+#mainNav li a:hover{text-decoration:none; color:#369;}
+#mainNav li.left a{background:url('/Images2/navSprite.png') 0 0 no-repeat;}
+#mainNav li.left a:hover{color:#fff; background:url('/Images2/navSprite.png') -135px 0 no-repeat;}
+#mainNav li.mid a{background:url('/Images2/navSprite.png') 0 -40px no-repeat;}
+#mainNav li.mid a:hover{color:#fff; background:url('/Images2/navSprite.png') -135px -40px no-repeat;}
+#mainNav li.right a{background:url('/Images2/navSprite.png') 0 -80px no-repeat;}
+#mainNav li.right a:hover{color:#fff; background:url('/Images2/navSprite.png') -135px -80px no-repeat;}
+#mainNav li.sel a{background:url('/Images2/navSprite.png') 0 -120px no-repeat; text-decoration:none; color:#f58025; padding:10px 0 0 0; height:35px;}
+#mainNav li.sel a:hover{color:#f58025; text-decoration:underline; background:url('/Images2/navSprite.png') 0 -120px no-repeat;}
+
+.minWrapper{
+    width:970px;
+    margin:0 auto;
+    padding:0 11px;
+    background:url('/Images2/wrapper/content_bg.png') repeat-y;
+}
+
+
+/* footer */
+#footerRule{border-top:1px solid #ccc; margin:0 11px; padding:0 0 8px 0;}
+#footer{margin:0 auto 5px auto; width:970px; background:url('/Images2/wrapper/footer_bot.png') no-repeat bottom; color:#666; padding:0 0 20px 0;}
+
+#footer img.lock{border:0; float:right;}
+div.footerContent{padding:0 0 5px 0; background:url('/Images2/wrapper/content_bg.png') repeat-y; zoom:1;}
+div.lockPosition{background:url('/Images2/wrapper/lock.png') 920px 40px no-repeat;}
+
+#footer ul, #popFooter ul, #smallPopFooter ul{margin:0; padding:0;}
+#footer li, #popFooter li, #smallPopFooter li{list-style:none; padding:0 0 2px 0; text-align:center;}
+#footer li.left{padding:0 25px 2px 25px; text-align:left;}
+#footer li.left span.version{float:left;}
+#footer li.right{padding:0 25px 2px 0; text-align:right;}
+#footer li a{padding:0 5px 0 5px;}
+
+div.footerContent p{text-align:center; padding:0 50px 5px 50px; margin:0;}
+
+input[type="text"], input[type="password"], select, textarea {
+    border: 1px solid #e5e5e5;
+}
+input[type="hidden"] {
+    border: 0 none;
+}
+
+/* ***** VW Opt In/Out, switch Styles ***** */
+        
+#pilotHeader {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    width: 948px;
+}
+
+.feedbackHidden {
+    display:none;
+}
+
+.pilotHeaderTxt {
+    width: 78%;
+    margin: 0 auto;
+    background: none repeat scroll 0 0 #ffffad;
+    border-bottom:1px solid #f8df6b;
+    border-left:  1px solid #f8df6b;
+    border-right: 1px solid #f8df6b;
+    color: #000000;
+    display: block;
+    font-size: 9pt;
+    line-height: 26px;
+    text-align: center;
+    padding: 3px 20px 3px 20px;
+}
+
+/******************************
+START
+    Customer Profile Drop Down
+    menu feature - Spring 2016
+******************************/
+/*
+RESET
+    other styles that
+    negatively effect
+    the desried look and
+    feel for this feature
+*/
+
+#CustProfileDropDown ul,
+#CustProfileDropDown li {
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+
+#CustProfileDropDown li a {
+    color: #369;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: auto;
+}
+
+#CustProfileDropDown li a:hover {
+    text-decoration: underline;
+}
+/* RESET - end */
+
+#CustProfileDropDown {
+    line-height: 20px;
+    position: relative;
+    text-align: right;
+}
+
+#CustProfileDropDown div#CustProfileDropDownContentWrapper{
+    display: inline;
+}
+
+#CustProfileDropDown div#CustProfileDropDownTitle {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Arial", sans-serif;
+    font-size: 12px;
+    color: #369;
+    display: inline;
+    padding-bottom: 5px;
+}
+
+#CustProfileDropDown div#CustProfileDropDownTitle span.CustProfileDdArrow {
+    background: url(/Images2/Icons/dd_icon2.png) right/10px no-repeat;
+    padding-right: 15px;
+}
+
+#CustProfileDropDown ul#CustProfileDropDownMenu {
+    background-color: #fff;
+    border: 1px #ccc solid;
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    z-index: 100;
+}
+
+div#CustProfileDropDownContentWrapper:hover > ul#CustProfileDropDownMenu {
+    display: block;
+}
+
+#CustProfileDropDown li {
+    vertical-align: middle;
+}
+
+#CustProfileDropDown ul#CustProfileDropDownMenu li {
+    border-bottom: 1px #ccc solid;
+}
+
+#CustProfileDropDown ul#CustProfileDropDownMenu li:last-child {
+    border: none;
+}
+
+#CustProfileDropDown ul#CustProfileDropDownMenu li a {
+    padding: 2px 8px;
+}
+
+/*****TOOLTIPS*****/
+#toolTip, #custInfoTooltip {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 1;
+    width: 150px;
+    visibility: hidden;
+}
+
+#toolTip .bd, #custInfoTooltip .bd {
+    background: #ffd;
+    border-color: #666;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 11px;
+    color: #000;
+    padding: 5px 6px;
+    width: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity = 90);
+    opacity: .9;
+    height: 100% !important;
+}
+
+#toolTip .yui-tt-shadow, #custInfoTooltip .yui-tt-shadow {
+    background-color: #000;
+    top: 2px;
+    right: -17px;
+    left: 3px;
+    bottom: -3px;
+    position: absolute;
+    z-index: -1;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    *filter: alpha(opacity = 30);
+}
+
+#toolTip .yui-tt-shadow-visible{
+    opacity: .12;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=12)";
+    *filter: alpha(opacity = 12);
+}
+
+/******************************
+END
+    Customer Profile drop down
+    menu feature - Spring 2016
+******************************/

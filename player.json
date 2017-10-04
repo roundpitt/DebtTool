@@ -1,0 +1,84 @@
+{
+	"player": {
+
+		"id": "123456",
+		"mapId": 0,
+		"nodeId": 0,
+		"gold": 23,
+		"stats": {
+			"maxHp": 10,
+			"hp": 10,
+			"maxFatigue": 100,
+			"fatigue": 100
+		},
+		"inventory": [
+			{},
+			{},
+			{},
+			{}
+		],
+		"equip": {
+			"head": null,
+			"overTop": {
+				"id": "36HexValue",
+				"type": {
+					"is": "armor",
+					"on": "overTop"
+				},
+				"name": "Vest",
+				"armor": 2,
+				"durability": 100
+			},
+			"top": {
+				"id": "36HexValue",
+				"type": {
+					"is": "armor",
+					"on": "top"
+				},
+				"name": "Shirt",
+				"armor": 1,
+				"durability": 100
+			},
+			"bottom": {
+				"id": "36HexValue",
+				"type": {
+					"is": "armor",
+					"on": "bottom"
+				},
+				"name": "Pants",
+				"armor": 1,
+				"durability": 100
+			},
+			"overBottom": {
+				"id": "36HexValue",
+				"type": {
+					"is": "armor",
+					"on": "overBottom"
+				},
+				"name": "Knee Pads",
+				"armor": 1,
+				"durability": 100
+			},
+			"arms": {
+				"id": "36HexValue",
+				"type": {
+					"is": "armor",
+					"on": "arms"
+				},
+				"name": "Vambraces",
+				"armor": 1,
+				"durability": 100
+			},
+			"feet": {
+				"id": "36HexValue",
+				"type": {
+					"is": "armor",
+					"on": "feet"
+				},
+				"name": "Boots",
+				"armor": 1,
+				"durability": 100
+			}
+		}
+	}
+}

@@ -1,0 +1,1187 @@
+<link type="text/css" rel="stylesheet" href="/css2/app-fc442b7111.css">
+<link type="text/css" rel="stylesheet" href="/css2/wbbMin.css">
+<div id="header">
+	<div class="top">
+		<div id="pncLink"><a href="/alservlet/MyAccountsServlet" title="PNC Online Banking Home"></a></div>
+
+		<div id="topLinks">
+		
+			<ul><li class="chat"><div id="lpChatButton1-en" class=""></div></li><li class="chat"><div id="lpChatButton-sp" class=""></div></li>
+			
+				<!-- liveChat.js dynamically adds <li class="chat"> and divs here -->
+			
+				<li class="left"><a href="#" onclick="openPrivacy();return false;" class="tipMe" title="PNC respects the privacy of our customers and is committed to protecting your information with the same care we utilize for all PNC transactions. Click to view the details of our consumer privacy principles.">Privacy</a></li>
+				<li class="mid"><a href="#" onclick="openSecurityCenterWindow();return false;" class="tipMe" title="Security is a priority at PNC. We are committed to protecting the security and confidentiality of your financial information. Click to learn more about how we protect you and how you can protect yourself.">Security</a></li>
+				<li class="right" title="Sign Off"><a href="/" >Sign Off</a></li>
+			</ul>
+		
+			<div class="lastSignOn">
+			</div>
+
+			
+				<div id="CustProfileDropDown">
+					<div id="CustProfileDropDownContentWrapper">
+						<div id="CustProfileDropDownTitle">
+							Customer Profile&nbsp;<span class="CustProfileDdArrow"></span>
+						</div>
+						<ul id="CustProfileDropDownMenu">
+						
+							<li><a href="/alservlet/PersonalInformationServlet">Personal Settings</a></li>
+						
+							<li><a href="/alservlet/SecurityInformationServlet">Security Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="mainNav">
+		<ul>
+			
+				<li id="myAccts" class="left sel"><a href="/alservlet/MyAccountsServlet">My Accounts</a></li>
+			
+
+			
+				<li id="transFunds" class="mid"><a href="/alservlet/TransferFundsControlServlet">Transfer Funds</a></li>
+			
+
+			
+				<li id="billCenter" class="mid"><a href="/alservlet/BillPayControlServlet">Pay Bills</a></li>
+			
+			
+				<li id="Alerts" class="mid"><a href="/alservlet/CtaAlertsControllerServlet">Alerts</a></li>
+			
+
+			
+				<li id="business" class="mid"><a href="/alservlet/BusinessResourcesServlet">Business Tools</a></li>
+			
+			
+				
+					<li id="customerService" class="mid"><a href="/alservlet/CustomerServiceServlet">Customer Service</a></li>
+				
+			
+			
+				<li id="myOffers" class="right"><a href="/alservlet/MyOffersServlet">My Offers</a></li>
+			
+		</ul>
+	</div>
+</div>
+
+
+
+
+    <div class="minWrapper">
+      <!-- Begin VW app -->
+      <div>
+
+      <!-- Render content for supported IE versions -->
+      <!--[if (gt IE 8)]><!-->
+        <!-- VW Labs Bar -->
+        <div labs-bar=""><div id="pilotHeader" ng-show="isOptInOutBannerVisible || isRolloutBannerVisible" aria-hidden="true" class="ng-hide"> <!--8415-->
+    <div class="pilotHeaderTxt">
+        <!-- ngIf: isOptInOutBannerVisible -->
+        <!-- ngIf: isRolloutBannerVisible -->
+        <a ‪ng-model="notRightClicked" ng-click="notRightClicked = !notRightClicked; bugReportClicked = false; messageSent= false;" tabindex="0">Something not right?</a>
+        &nbsp;|&nbsp;
+        <!-- ngIf: !isRolloutBannerVisible --><a pnc-analytics-event="{'rma_action': 'vw-switch-vw2'}" ng-click="GoToVW2()" ng-if="!isRolloutBannerVisible" class="ng-scope ng-isolate-scope" tabindex="0">Switch back to the old version.</a><!-- end ngIf: !isRolloutBannerVisible -->
+        <!-- ngIf: !isRolloutBannerVisible --><span ng-if="!isRolloutBannerVisible" class="ng-scope"> | </span><!-- end ngIf: !isRolloutBannerVisible -->
+        <a ng-click="showCantFindSomethingModal()" tabindex="0">Can't find something?</a>
+        <div class="notRightBubble ng-hide" ng-class="{rolloutMargin: isRolloutBannerVisible, norolloutMargin: isOptInOutBannerVisible}" ng-show="notRightClicked" aria-hidden="true">
+            <div class="caret"></div>
+            <div class="bubble">
+                <a class="close-x" ng-click="CloseBugReportForm()" tabindex="0"></a>
+                We're sorry that things aren't quite right and would like to hear about your experience.
+                <br>
+                <span ng-show="LiveChatShowing" aria-hidden="true" class="ng-hide">
+                    <br>
+                    <strong>Get help now</strong>
+                    <br>
+                    If you have questions about how to use the new interface or where a particular feature is, chat with us and we can help.
+                    <br>
+                </span>
+
+                <div pnc-switch="LiveEngageChat" id="lpVwChatButton-en" ng-click="chatButtonClicked()" class="ng-isolate-scope" role="button" tabindex="0" style="padding-bottom: 0px;"></div>
+                <div id="lpButtonDivPopup" ng-click="chatButtonClicked()" role="button" tabindex="0"></div>
+                <strong>Found a bug?</strong>
+                <br>
+                If you've found something you think isn't working right, send us the details so we can investigate.
+                <br><br>
+                Please use this just for things that don't appear to be working correctly. For questions about a transaction, bill payment or another account-related issue, please use the
+                <a href="/alservlet/MessageListServlet">online banking secure message center instead</a>.
+                <br>
+                <button ng-click="bugReportClicked = true" tabindex="0">Send a bug report</button>
+            </div>
+        </div>
+        <div class="notRightBubble ng-hide" ng-show="showBugReportForm()" aria-hidden="true">
+            <div class="caret"></div>
+            <div class="bubble">
+                <a class="close-x" ng-click="CloseBugReportForm()" tabindex="0"></a>
+                <form name="bugReportForm" class="ng-pristine ng-invalid ng-invalid-required">
+                    Think you found a bug? Can't find something you used before?<br>Let us know so we can improve.
+                    <br><br>
+                    For questions about a transaction, bill payment or another account-related issue, please use the <a href="/alservlet/MessageListServlet">online banking secure message center</a>.
+                    <br><br>
+                    <label for="probArea"><strong>Where did you notice the issue?</strong></label>
+                    <br>
+                    <select ng-options="view for view in views" id="probArea" ng-model="problemArea" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" tabindex="0" aria-required="true" aria-invalid="true"><option value="?" selected="selected"></option><option label="Quick View" value="string:Quick View">Quick View</option><option label="Calendar" value="string:Calendar">Calendar</option><option label="Money Bar" value="string:Money Bar">Money Bar</option><option label="Account Activity" value="string:Account Activity">Account Activity</option><option label="Spending + Budgets" value="string:Spending + Budgets">Spending + Budgets</option><option label="Savings Engine" value="string:Savings Engine">Savings Engine</option><option label="Preferences" value="string:Preferences">Preferences</option><option label="Other" value="string:Other">Other</option></select>
+                    <br><br>
+                    <label for="bugReportTextArea"><strong>What happened?</strong></label>
+                    <br>
+                    Please give us as much detail as you can: what you were doing leading up to the issue, what you saw when the issue occurred, and any error messages you saw.
+                    <br>
+                    <textarea class="bugReportFormTextArea ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" id="bugReportTextArea" ng-model="bugDescription" required="" aria-multiline="true" tabindex="0" aria-required="true" aria-invalid="true"></textarea>
+                    <br><br>
+                    <!-- Commenting out for Feb release. Will be back in April release.
+                    <strong>Have a screenshot?</strong> (Max 6 MB)
+                    <br/>
+                    <input type="file" file-model="screenshot" accept="application/pdf,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,image/jpeg,image/gif,image/tiff,image/png,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+                    <br/><br/>-->
+                    <span class="bugReportFormSmallText">By submitting this form, you'll send some information about your account to the Virtual Wallet team so that we can more effectively troubleshoot your problem.</span>
+                    <br>
+                    <button ng-click="SendBugReport()" ng-disabled="bugReportForm.$invalid" tabindex="0" aria-disabled="true" disabled="disabled">Send</button>
+                    <span class="sendingSpinner ng-hide" ng-show="sendingMessage" aria-hidden="true"><img src="/vw3/dev/data/img/spinner-small.gif" alt="" width="16" height="16"> <strong>Sending...</strong></span>
+                </form>
+            </div>
+        </div>
+        <div class="notRightBubble ng-hide" ng-show="messageSent" aria-hidden="true">
+            <div class="caret"></div>
+            <div class="bubble">
+                <a class="close-x" ng-click="CloseBugReportForm()" tabindex="0"></a>
+                <span class="messageSentSuccess ng-hide" ng-show="messageSuccess" aria-hidden="true">
+                    <p>Thanks for your feedback!</p>
+                    <p>We'll let you know if we need any more information.</p>
+                </span>
+                <span class="messageSentFail ng-hide" ng-show="messageFail" aria-hidden="true">
+                    <p><i class="fa fa-exclamation-triangle"></i> Sorry, an error occurred while sending your feedback.</p>
+                    <p>Please try again or call us at 1-800-352-2255.</p>
+                </span>
+                <button ng-click="CloseBugReportForm()" tabindex="0">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        <!-- Edition bar -->
+<header class="wrapper vwContainer clearfix editionBar ng-scope" ng-controller="EditionBarController as editionbar">
+    <div class="editionBarLeft">
+      <div class="editionLogo ng-isolate-scope" edition="editionbar.edition()" akamai-url="https://content.pncmc.com/staging/pnc/personal/onlinebanking/vw/" tabindex="-1"><img src="https://content.pncmc.com/staging/pnc/personal/onlinebanking/vw/images/vw_logos/edition-vw.png" id="VWEditionLogo" width="187" height="38" alt="Virtual Wallet" class="editionGraphic" ng-src="https://content.pncmc.com/staging/pnc/personal/onlinebanking/vw/images/vw_logos/edition-vw.png">
+<img src="/images2/other/pnc_main_logo.png" id="PNCLogo" width="97" height="60" alt="PNC" class="printOnly"></div>
+      <div class="moneybarTopSmall">
+          <div moneybar-slider="" thin-bar="" balances="editionbar.AccountsModelProvider.balances(
+                 editionbar.BalanceTypeEnum.SPEND,
+                 editionbar.BalanceTypeEnum.RESERVE,
+                 editionbar.BalanceTypeEnum.FREE,
+                 editionbar.BalanceTypeEnum.SCHEDULED_OUT)" wishlist="editionbar.wishListItems()" reservelist="editionbar.reserveItems()" set-aside-amount="editionbar.totalWishList()" class="ng-isolate-scope"><!-- Loading Container -->
+<!-- ngIf: !initialized -->
+<div class="moneyBarContainer  thin-bar smallFormFactor" ng-show="initialized" ng-class="{'thin-bar':thinBar,'isNegative':isNegative, 'isReserveNegative':isReserveNegative, 'isSpendNegative':isSpendNegative}" ng-mouseenter="moneyhover = true;" ng-mouseleave="moneyhover = false;" aria-hidden="false" style="">
+    <div class="moneyBarContainer  thin-bar smallFormFactor" ng-class="{'thin-bar':thinBar,'isNegative':isNegative, 'isReserveNegative':isReserveNegative, 'isSpendNegative':isSpendNegative}" ng-click="showBalPopover()" role="button" tabindex="0">
+        <!-- ngIf: showMbPopover -->
+        <!-- ngIf: !showMbPopover --><svg class="freeBalanceClose ng-scope" ng-if="!showMbPopover" version="1.1" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px">
+            <polygon xmlns="http://www.w3.org/2000/svg" points="0,0 0,10 5,5" fill="#000000"></polygon>
+        </svg><!-- end ngIf: !showMbPopover -->
+        <p class="freeBalance" aria-label="Available free balance $1,478.76">Free Balance: </p><div class="smallFormFactor">
+	 <div class="transferBubbleContainer ng-hide" ng-show="transferBubbleShow" ng-style="transferBubbleLeft" aria-hidden="true" style="left: 100%; margin-left: -12.5em;">
+		  <div class="caret"></div>
+		  <div class="bubble transferBubble">
+				<h1>Confirm Money Bar transfer</h1>
+				<form name="moneybarTransfer" novalidate="" ng-hide="activeTransfer" class="ng-valid ng-valid-allocate-wish-item ng-valid-transfer-amount ng-valid-required ng-valid-available-balance ng-dirty ng-valid-parse" aria-hidden="false" style="">
+					<p>Transfer <input id="sliderAmount" class="editTransfer ng-valid ng-scope ng-not-empty ng-valid-transfer-amount ng-valid-required ng-valid-available-balance ng-dirty ng-valid-parse ng-touched" name="transferAmount" min="1" aria-label="Edit transfer amount" type="text" ng-model="transferAmount.amount" ng-model-options="{ allowInvalid: true }" available-balance-validator="1478.76" transfer-amount-validator="" required="" ng-keypress="validateCharacter($event)" ng-focus="setUnformattedValue($event)" ng-blur="validateFormat($event);" tabindex="0" aria-required="false" aria-invalid="false"> from <span class="transferDirection ng-binding">Reserve to Spend</span>?</p>
+
+					<div ng-messages="" ng-messages-multiple="" class="error mbError ng-inactive" for="moneybarTransfer.transferAmount.$error" ng-show="moneybarTransfer.transferAmount.$touched || moneybarTransfer.$submitted" aria-live="assertive" aria-hidden="false">
+						<!-- ngMessage: -->
+						<!-- ngMessage: -->
+						<!-- ngMessage: -->
+					</div>
+					<p>
+						 <!-- ngRepeat: roundOpt in roundOpts track by roundOpt.opt --><button class="roundButton ng-binding ng-scope" ng-repeat="roundOpt in roundOpts track by roundOpt.opt" ng-click="round(roundOpt.opt)" tabindex="0">$1,460</button><!-- end ngRepeat: roundOpt in roundOpts track by roundOpt.opt --><button class="roundButton ng-binding ng-scope" ng-repeat="roundOpt in roundOpts track by roundOpt.opt" ng-click="round(roundOpt.opt)" tabindex="0">$1,479</button><!-- end ngRepeat: roundOpt in roundOpts track by roundOpt.opt --><button class="roundButton ng-binding ng-scope" ng-repeat="roundOpt in roundOpts track by roundOpt.opt" ng-click="round(roundOpt.opt)" tabindex="0">$1,480</button><!-- end ngRepeat: roundOpt in roundOpts track by roundOpt.opt -->
+					</p>
+					<p ng-show="wlCheckboxShow &amp;&amp; wishListItems.length > 0" aria-hidden="true" class="ng-hide"><input class="wlCheckbox ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" id="wlCheck" ng-model="checked" tabindex="0" aria-checked="false" aria-invalid="false"> <label for="wlCheck" id="wlCheckLabel"> Allocate this money to a Reserve Wish List item</label></p>
+					<p ng-show="checked" aria-hidden="true" class="ng-hide">
+						 <select name="frmAllocateWishList" aria-label="Select Wish List item to transfer funds to" class="wlDropdown ng-pristine ng-untouched ng-valid ng-empty ng-valid-allocate-wish-item" ng-model="allocateWishList" ng-options="item.description for item in wishListItems | orderBy:'amountAllocated/goalAmount'" allocate-wish-item-validator="false" tabindex="0" aria-invalid="false"><option value="?" selected="selected"></option></select>
+						 </p><div ng-messages="" ng-messages-multiple="" class="error ng-inactive ng-hide" for="moneybarTransfer.frmAllocateWishList.$error" ng-show="moneybarTransfer.$submitted" aria-live="assertive" aria-hidden="true">
+							<!-- ngMessage: -->
+						</div>
+					<p></p>
+					<div class="setAsideRemoval ng-hide" ng-show="displaySetAsideRemoval" aria-hidden="true">
+						 <p class="setAsideRemovalMsg">
+							  To complete this transfer, we'll have to take some money out of a few of your Reserve Items and Wish List items. The new amount for those items will be:
+						 </p>
+						 <ul class="setAsideRemovalList">
+							  <!-- ngRepeat: item in setAsideRemovalList -->
+						 </ul>
+						 <p><a class="setAsideRemovalExpLink" ng-click="showExplanation = true" tabindex="0">How did we get this list?</a></p>
+						 <p class="setAsideRemovalExplanation ng-hide" ng-show="showExplanation" aria-hidden="true">
+							  First we take money from Wish List Items, by percentage saved (from least to greatest). Then we take from your Reserve Items without a date and then ones with a date. You can always move money around after you make the transfer.
+						 </p>
+					</div>
+					<span class="error ng-hide" ng-show="transferError" aria-hidden="true"><i class="fa fa-exclamation-triangle"></i> Sorry an error occurred processing your transfer</span>
+					<p class="transferConfirm">
+                        <button ng-disabled="moneybarTransfer.$invalid" ng-click="Transfer()" tabindex="0" aria-disabled="false">Transfer</button>
+                        <a href="#" class="cancel" pnc-stop-event="click" ng-click="CancelTransfer($event);" tabindex="0">Cancel</a>
+                    </p>
+				</form>
+				<div ng-show="activeTransfer" aria-hidden="true" class="ng-hide" style="">
+					<img src="/vw3/dev/data/img/spinner-small.gif" alt="" width="16" height="16"> <strong>Transferring...</strong>
+		  		</div>
+		  		<div ng-show="completeTransfer" aria-hidden="true" class="ng-hide">
+					<strong>Transfer completed!</strong>
+		  		</div>
+		  </div>
+
+	 </div>
+</div></div><span class="freeBalanceAmt ng-binding">$1,478.76</span>
+        <div class="balancesPopover ng-hide" ng-show="showMbPopover" aria-hidden="true">
+            <div class="caret"></div>
+             <div class="bubble transferBubble">
+                <ul class="popoverBalancesList">
+                    <!-- ngRepeat: type in walletTypes track by type.$name --><!-- ngIf: popoverBalances | balancesByType: type --><li ng-repeat="type in walletTypes track by type.$name" tabindex="0" aria-label="Spend$1,478.76" class="spendLabel" ng-if="popoverBalances | balancesByType: type">
+                        <span class="accountTxt"><strong class="ng-binding">Spend</strong></span>
+                        <span class="accountBal" ng-class="{'error': (popoverBalances | balancesByType:type:'balance') < 0}"><strong class="ng-binding">$1,478.76</strong></span>
+                    </li><!-- end ngIf: popoverBalances | balancesByType: type --><!-- end ngRepeat: type in walletTypes track by type.$name --><!-- ngIf: popoverBalances | balancesByType: type --><li ng-repeat="type in walletTypes track by type.$name" tabindex="0" aria-label="Reserve$0.00" class="reserveLabel" ng-if="popoverBalances | balancesByType: type">
+                        <span class="accountTxt"><strong class="ng-binding">Reserve</strong></span>
+                        <span class="accountBal" ng-class="{'error': (popoverBalances | balancesByType:type:'balance') < 0}"><strong class="ng-binding">$0.00</strong></span>
+                    </li><!-- end ngIf: popoverBalances | balancesByType: type --><!-- end ngRepeat: type in walletTypes track by type.$name --><!-- ngIf: popoverBalances | balancesByType: type --><li ng-repeat="type in walletTypes track by type.$name" tabindex="0" aria-label="Growth$0.00" class="growthLabel" ng-if="popoverBalances | balancesByType: type">
+                        <span class="accountTxt"><strong class="ng-binding">Growth</strong></span>
+                        <span class="accountBal" ng-class="{'error': (popoverBalances | balancesByType:type:'balance') < 0}"><strong class="ng-binding">$0.00</strong></span>
+                    </li><!-- end ngIf: popoverBalances | balancesByType: type --><!-- end ngRepeat: type in walletTypes track by type.$name -->
+                    <!-- ngIf: popoverBalances | balancesByType:'CREDITCARD' -->
+                </ul>
+                <p class="popoverClose"><i ng-click="closeBalPopover()" aria-label="Close" class="fa fa-times" role="button" tabindex="0"></i></p>
+            </div>
+        </div>
+
+    <div class="moneybar-tabs" ng-show="initialized" ng-class="{dangerDayReserve:dangerDayReserve, dangerDaySpend:dangerDaySpend, largeScheduledOut:largeScheduledOut}" aria-hidden="false" style="">
+        <div class="scheduledOut onlyScheduledOutTab" ng-style="scheduledOutWidth" ng-class="{'onlyScheduledOutTab':scheduledOutAmount <= 0,'hasSavingsList':hasSavingsList,'scheduledOutNan':scheduledIsNan}" style="width: 0%;">
+            <div class="tabs">
+                <div class="tab scheduledOutTab" ng-show="!scheduledIsNan" aria-hidden="false" style="">
+                    <danger-day-icon ng-show="dangerDaySpend" class="ng-isolate-scope ng-hide" aria-hidden="true"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjJweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjIgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjQTIxRDJGIiBkPSJNNC43LDE5LjVjLTEuOCwwLTMuMS0wLjYtMy44LTEuOGMtMC43LTEuMi0wLjUtMi45LDAuNS00LjZsNS45LTEwYzEtMS43LDIuMy0yLjYsMy43LTIuNnMyLjgsMC45LDMuNywyLjYNCgkJCWw1LjksMTBjMSwxLjcsMS4yLDMuNCwwLjUsNC42Yy0wLjcsMS4yLTIsMS44LTMuOCwxLjhINC43eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEsMWMxLjIsMCwyLjQsMC44LDMuMywyLjNsNS45LDEwYzEuOCwzLjEsMC41LDUuNi0yLjksNS42SDQuN2MtMy40LDAtNC43LTIuNS0yLjktNS42bDUuOS0xMA0KCQkJQzguNiwxLjgsOS44LDEsMTEsMSBNMTEsMEM5LjQsMCw3LjksMSw2LjgsMi44TDEsMTIuOWMtMS4xLDEuOS0xLjMsMy43LTAuNSw1LjFjMC44LDEuMywyLjIsMiw0LjIsMmgxMi42YzIsMCwzLjQtMC43LDQuMi0yDQoJCQljMC44LTEuNCwwLjYtMy4yLTAuNS01LjFsLTUuOS0xMEMxNC4xLDEsMTIuNiwwLDExLDBMMTEsMHoiLz4NCgk8L2c+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTExLDEzLjZjMC42LDAsMS4xLDAuNSwxLjEsMS4yYzAsMC43LTAuNSwxLjItMS4xLDEuMmMtMC42LDAtMS4xLTAuNS0xLjEtMS4yQzkuOSwxNC4yLDEwLjQsMTMuNiwxMSwxMy42DQoJCSBNMTIsOC4xYzAsMC4yLDAsMC41LDAsMC43bC0wLjQsMy40Yy0wLjEsMC40LTAuMiwwLjUtMC42LDAuNWMtMC40LDAtMC41LTAuMS0wLjYtMC41TDEwLDguN2MwLTAuMi0wLjEtMC41LTAuMS0wLjdWNi40DQoJCWMwLTAuNywwLjQtMS4xLDEuMS0xLjFjMC43LDAsMS4xLDAuNCwxLjEsMS4xVjguMXoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg==" class="dangerdayicon-clickable" ng-class="{mini: $ctrl.mini}" role="button" tabindex="0" alt="Danger Day" title="Danger Day" ng-click="$ctrl.DangerDayOverlayActions.view()">
+</danger-day-icon>
+                    <div>Scheduled Out
+                        <span class="ng-binding">$0.00</span></div>
+                </div>
+                <div class="tab scheduledOutTab scheduledOutNan ng-hide" ng-show="scheduledIsNan" aria-hidden="true" style="">
+                    <danger-day-icon ng-show="dangerDaySpend" class="ng-isolate-scope ng-hide" aria-hidden="true"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjJweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjIgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjQTIxRDJGIiBkPSJNNC43LDE5LjVjLTEuOCwwLTMuMS0wLjYtMy44LTEuOGMtMC43LTEuMi0wLjUtMi45LDAuNS00LjZsNS45LTEwYzEtMS43LDIuMy0yLjYsMy43LTIuNnMyLjgsMC45LDMuNywyLjYNCgkJCWw1LjksMTBjMSwxLjcsMS4yLDMuNCwwLjUsNC42Yy0wLjcsMS4yLTIsMS44LTMuOCwxLjhINC43eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEsMWMxLjIsMCwyLjQsMC44LDMuMywyLjNsNS45LDEwYzEuOCwzLjEsMC41LDUuNi0yLjksNS42SDQuN2MtMy40LDAtNC43LTIuNS0yLjktNS42bDUuOS0xMA0KCQkJQzguNiwxLjgsOS44LDEsMTEsMSBNMTEsMEM5LjQsMCw3LjksMSw2LjgsMi44TDEsMTIuOWMtMS4xLDEuOS0xLjMsMy43LTAuNSw1LjFjMC44LDEuMywyLjIsMiw0LjIsMmgxMi42YzIsMCwzLjQtMC43LDQuMi0yDQoJCQljMC44LTEuNCwwLjYtMy4yLTAuNS01LjFsLTUuOS0xMEMxNC4xLDEsMTIuNiwwLDExLDBMMTEsMHoiLz4NCgk8L2c+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTExLDEzLjZjMC42LDAsMS4xLDAuNSwxLjEsMS4yYzAsMC43LTAuNSwxLjItMS4xLDEuMmMtMC42LDAtMS4xLTAuNS0xLjEtMS4yQzkuOSwxNC4yLDEwLjQsMTMuNiwxMSwxMy42DQoJCSBNMTIsOC4xYzAsMC4yLDAsMC41LDAsMC43bC0wLjQsMy40Yy0wLjEsMC40LTAuMiwwLjUtMC42LDAuNWMtMC40LDAtMC41LTAuMS0wLjYtMC41TDEwLDguN2MwLTAuMi0wLjEtMC41LTAuMS0wLjdWNi40DQoJCWMwLTAuNywwLjQtMS4xLDEuMS0xLjFjMC43LDAsMS4xLDAuNCwxLjEsMS4xVjguMXoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg==" class="dangerdayicon-clickable" ng-class="{mini: $ctrl.mini}" role="button" tabindex="0" alt="Danger Day" title="Danger Day" ng-click="$ctrl.DangerDayOverlayActions.view()">
+</danger-day-icon>
+                    <div>Scheduled Out
+                        <span><i class="fa fa-spinner fa-spin dark-gray "></i></span></div>
+                </div>
+
+                <div class="tab freeTab ng-animate moneybarFreeAmount tabBlock" ng-class="{moneybarFreeAmount : freeAmount > 0, tabBlock : freeAmount > 0, hideFreeTab : freeAmount == 0}" data-ng-animate="2" style="top: 0px;">Free<span class="ng-binding">$1,478.76</span></div>
+            </div>
+        </div>
+        <div class="setAside ng-hide" ng-show="!dangerDayReserve &amp;&amp; setAsideAmount > 0" ng-style="setAsideWidth" aria-hidden="true" style="width: 0%;">
+            <div class="tabs">
+                <div class="tab setAsideTab moneybarSetAside" ng-class="{moneybarSetAside:moneyhover || smallFormFactor}">
+                    Savings List <span class="ng-binding">$0.00</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="wraps" ng-show="initialized" ng-class="{dangerDayReserve:dangerDayReserve,largeScheduledOut:largeScheduledOut}" aria-hidden="false" style="">
+        <div class="wrap scheduledOutWraparound ng-hide" ng-style="scheduledOutWidth" ng-show="scheduledOutAmount > 0" aria-hidden="true" style="width: 0%;"></div>
+        <div class="wrap setAsideWraparound ng-hide" ng-show="!largeScheduledOut &amp;&amp; !dangerDayReserve &amp;&amp; setAsideAmount > 0" ng-style="setAsideWidth" aria-hidden="true" style="width: 0%;"></div>
+    </div>
+    <danger-day-icon ng-show="dangerDaySpend &amp;&amp; thinBar" mini="true" class="ng-isolate-scope ng-hide" aria-hidden="true"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjJweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjIgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjQTIxRDJGIiBkPSJNNC43LDE5LjVjLTEuOCwwLTMuMS0wLjYtMy44LTEuOGMtMC43LTEuMi0wLjUtMi45LDAuNS00LjZsNS45LTEwYzEtMS43LDIuMy0yLjYsMy43LTIuNnMyLjgsMC45LDMuNywyLjYNCgkJCWw1LjksMTBjMSwxLjcsMS4yLDMuNCwwLjUsNC42Yy0wLjcsMS4yLTIsMS44LTMuOCwxLjhINC43eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEsMWMxLjIsMCwyLjQsMC44LDMuMywyLjNsNS45LDEwYzEuOCwzLjEsMC41LDUuNi0yLjksNS42SDQuN2MtMy40LDAtNC43LTIuNS0yLjktNS42bDUuOS0xMA0KCQkJQzguNiwxLjgsOS44LDEsMTEsMSBNMTEsMEM5LjQsMCw3LjksMSw2LjgsMi44TDEsMTIuOWMtMS4xLDEuOS0xLjMsMy43LTAuNSw1LjFjMC44LDEuMywyLjIsMiw0LjIsMmgxMi42YzIsMCwzLjQtMC43LDQuMi0yDQoJCQljMC44LTEuNCwwLjYtMy4yLTAuNS01LjFsLTUuOS0xMEMxNC4xLDEsMTIuNiwwLDExLDBMMTEsMHoiLz4NCgk8L2c+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTExLDEzLjZjMC42LDAsMS4xLDAuNSwxLjEsMS4yYzAsMC43LTAuNSwxLjItMS4xLDEuMmMtMC42LDAtMS4xLTAuNS0xLjEtMS4yQzkuOSwxNC4yLDEwLjQsMTMuNiwxMSwxMy42DQoJCSBNMTIsOC4xYzAsMC4yLDAsMC41LDAsMC43bC0wLjQsMy40Yy0wLjEsMC40LTAuMiwwLjUtMC42LDAuNWMtMC40LDAtMC41LTAuMS0wLjYtMC41TDEwLDguN2MwLTAuMi0wLjEtMC41LTAuMS0wLjdWNi40DQoJCWMwLTAuNywwLjQtMS4xLDEuMS0xLjFjMC43LDAsMS4xLDAuNCwxLjEsMS4xVjguMXoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg==" class="dangerdayicon-clickable mini" ng-class="{mini: $ctrl.mini}" role="button" tabindex="0" alt="Danger Day" title="Danger Day" ng-click="$ctrl.DangerDayOverlayActions.view()">
+</danger-day-icon>
+    <div class="mySlider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all ui-state-disabled ui-slider-disabled" ng-class="{'fullWidthRange':fullWidthRange}" aria-disabled="false" style=""><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 37.5167%;"></div><div class="scheduledOut smallFormFactor onlyScheduledOutTab" ng-style="fullScheduledOutWidth" ng-class="{onlyScheduledOutTab:scheduledOutAmount <= 0,'scheduledOutNan':scheduledIsNan}" style="width: 0%;">
+</div>
+<div class="setAside smallFormFactor ng-hide onlyScheduledOutTab" ng-style="setAsideWidth" ng-class="{onlyScheduledOutTab:scheduledOutAmount <= 0}" ng-show="!dangerDayReserve &amp;&amp; setAsideAmount > 0" aria-hidden="true" style="width: 0%;">
+</div><a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)" style="left: 37.5167%;"><div class="smallFormFactor" ng-class="{'slider-left-side': moneybarVal < 15, 'slider-right-side': moneybarVal > 85}" style="">
+    <div class="sliderArrows">
+        <span class="fa fa-caret-left"></span><span class="fa fa-caret-right"></span>
+    </div>
+    <div class="balance spendBal" ng-show="!badBalance" ng-class="{'noHover': disableClick}" aria-hidden="false" style="">Spend <span class="ng-binding">$650.84</span></div>
+    <div class="balance reserveBal" ng-show="!badBalance &amp;&amp; hasReserve" aria-hidden="false" style="">Reserve <span class="ng-binding">$1,083.96</span></div>
+    <div class="balance spendBal ng-hide" ng-show="badBalance" ng-class="{'noHover': disableClick}" aria-hidden="true" style="">Spend <span class="ng-binding"></span></div>
+    <div class="balance reserveBal ng-hide" ng-show="badBalance &amp;&amp; hasReserve" aria-hidden="true">Reserve <span class="ng-binding"></span></div>
+</div></a></div>
+<div class="{{smallFormFactor}} ng-scope">
+	 <div class="transferBubbleContainer ng-hide" ng-show="transferBubbleShow" ng-style="transferBubbleLeft">
+		  <div class="caret"></div>
+		  <div class="bubble transferBubble">
+				<h1>Confirm Money Bar transfer</h1>
+				<form name="moneybarTransfer" novalidate="" ng-hide="activeTransfer" class="ng-pristine ng-valid">
+					<p>Transfer <input id="sliderAmount" class="editTransfer ng-pristine ng-untouched ng-valid ng-scope" name="transferAmount" min="1" aria-label="Edit transfer amount" type="text" ng-model="transferAmount.amount" ng-model-options="{ allowInvalid: true }" available-balance-validator="{{transferAmount.sourceBalance}}" transfer-amount-validator="" required="" ng-keypress="validateCharacter($event)" ng-focus="setUnformattedValue($event)" ng-blur="validateFormat($event);" tabindex="0"> from <span class="transferDirection ng-binding">{{transferAmount.text}}</span>?</p>
+
+					<div ng-messages="" ng-messages-multiple="" class="error mbError" for="moneybarTransfer.transferAmount.$error" ng-show="moneybarTransfer.transferAmount.$touched || moneybarTransfer.$submitted" aria-live="assertive">
+						<!-- ngMessage: -->
+						<!-- ngMessage: -->
+						<!-- ngMessage: -->
+					</div>
+					<p>
+						 <!-- ngRepeat: roundOpt in roundOpts track by roundOpt.opt -->
+					</p>
+					<p ng-show="wlCheckboxShow &amp;&amp; wishListItems.length > 0"><input class="wlCheckbox ng-pristine ng-untouched ng-valid" type="checkbox" id="wlCheck" ng-model="checked" tabindex="0"> <label for="wlCheck" id="wlCheckLabel"> Allocate this money to a Reserve Wish List item</label></p>
+					<p ng-show="checked">
+						 <select name="frmAllocateWishList" aria-label="Select Wish List item to transfer funds to" class="wlDropdown ng-pristine ng-untouched ng-valid" ng-model="allocateWishList" ng-options="item.description for item in wishListItems | orderBy:'amountAllocated/goalAmount'" allocate-wish-item-validator="{{checked}}" tabindex="0"></select>
+						 </p><div ng-messages="" ng-messages-multiple="" class="error" for="moneybarTransfer.frmAllocateWishList.$error" ng-show="moneybarTransfer.$submitted" aria-live="assertive">
+							<!-- ngMessage: -->
+						</div>
+					<p></p>
+					<div class="setAsideRemoval" ng-show="displaySetAsideRemoval">
+						 <p class="setAsideRemovalMsg">
+							  To complete this transfer, we'll have to take some money out of a few of your Reserve Items and Wish List items. The new amount for those items will be:
+						 </p>
+						 <ul class="setAsideRemovalList">
+							  <!-- ngRepeat: item in setAsideRemovalList -->
+						 </ul>
+						 <p><a class="setAsideRemovalExpLink" ng-click="showExplanation = true" tabindex="0">How did we get this list?</a></p>
+						 <p class="setAsideRemovalExplanation" ng-show="showExplanation">
+							  First we take money from Wish List Items, by percentage saved (from least to greatest). Then we take from your Reserve Items without a date and then ones with a date. You can always move money around after you make the transfer.
+						 </p>
+					</div>
+					<span class="error" ng-show="transferError"><i class="fa fa-exclamation-triangle"></i> Sorry an error occurred processing your transfer</span>
+					<p class="transferConfirm">
+                        <button ng-disabled="moneybarTransfer.$invalid" ng-click="Transfer()" tabindex="0">Transfer</button>
+                        <a href="#" class="cancel" pnc-stop-event="click" ng-click="CancelTransfer($event);" tabindex="0">Cancel</a>
+                    </p>
+				</form>
+				<div ng-show="activeTransfer">
+					<img src="/vw3/dev/data/img/spinner-small.gif" alt="" width="16" height="16"> <strong>Transferring...</strong>
+		  		</div>
+		  		<div ng-show="completeTransfer">
+					<strong>Transfer completed!</strong>
+		  		</div>
+		  </div>
+
+	 </div>
+</div></div>
+</div>
+      </div>
+    </div>
+    <div class="editionBarRight">
+      <theme-image class="themeImage ng-isolate-scope" theme-info="editionbar.theme()" user-info="editionbar.userInfo()"><!-- ngIf: themeInfo.baseImage || hasBirthday || anniversary --></theme-image>
+    </div>
+    <!-- ngIf: editionbar.showGenMocks -->
+</header>
+        <!-- navigation header -->
+        <!-- ngInclude: --><div id="VwNavArea" class="wrapper vwContainer clearfix vwNavArea ng-scope" ng-controller="NavHeaderController as navheader">
+    <!-- ngIf: !hasBirthday && !hasAnniversary --><style type="text/css" ng-if="!hasBirthday &amp;&amp; !hasAnniversary" class="ng-binding ng-scope">
+        nav#VWNav li.active a:after {
+            border-bottom-color: ;
+        }
+        nav#VWNav li#nav-triple li.active:not(.todo) a:after {
+            border-right-color: ;
+        }
+        nav#VWNav a:hover svg, nav#VWNav nav a:active svg {
+            fill: ;
+        }
+        .todoPopup:after {
+            border-top-color: ;
+        }
+        .communityPopup:after {
+            border-top-color: ;
+        }
+        nav#VWNav li.active a svg {
+            fill: ;
+        }
+    </style><!-- end ngIf: !hasBirthday && !hasAnniversary -->
+
+    <nav id="VWNav">
+        <ul class="nav navbar-nav">
+            <li id="nav-quickview" ui-sref-active="active" class="active">
+                <a ui-sref="quickview" href="#/quickview">
+                    <div class="navIcon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                            <g id="Quickview">
+                                <path class="st1" d="M32,16H15l17-4c0,0,1.9-0.5,1.9,1.5v3.1C33.4,16.3,32.9,16,32,16z M31.3,17.1H15c0,0-2,0-2,2V36h18.3
+                                    c0,0,3.7,0,3.7-4V21.1C35,21.1,35.3,17.1,31.3,17.1z"></path>
+                            </g>
+                        </svg>
+                        <div class="navIconText">Quick View</div>
+                    </div>
+                </a>
+            </li>
+            <li id="nav-calendar" ui-sref-active="active" class="">
+                <a ui-sref="calendar" href="#/calendar">
+                    <div class="navIcon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                            <g id="Calendar">
+                                <rect x="24" y="18" class="st2" width="1" height="17"></rect>
+                                <rect x="31" y="18" class="st2" width="1" height="17"></rect>
+                                <rect x="17" y="18" class="st2" width="1" height="17"></rect>
+                                <rect x="10" y="18" class="st2" width="1" height="18"></rect>
+                                <rect x="38" y="18" class="st2" width="1" height="18"></rect>
+                                <rect x="10" y="23" class="st2" width="29" height="1"></rect>
+                                <rect x="10" y="35" class="st2" width="29" height="1"></rect>
+                                <rect x="10" y="29" class="st2" width="29" height="1"></rect>
+                                <rect x="10" y="12" class="st2" width="29" height="6"></rect>
+                            </g>
+                        </svg>
+                        <div class="navIconText">Calendar</div>
+                    </div>
+                </a>
+            </li>
+            <li id="nav-moneybar" ui-sref-active="active">
+                <a ui-sref="moneybar" href="#/moneybar">
+                    <div class="navIcon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                            <g id="Money_Bar">
+                                <g>
+                                    <g>
+                                        <path class="st2" d="M39,17c3.9,0,7,3.1,7,7s-3.1,7-7,7H9c-3.9,0-7-3.1-7-7s3.1-7,7-7H39 M39,16H9c-4.4,0-8,3.6-8,8s3.6,8,8,8h30
+                                            c4.4,0,8-3.6,8-8S43.4,16,39,16L39,16z"></path>
+                                    </g>
+                                    <rect x="25.8" y="16.2" class="st2" width="5.2" height="15.6"></rect>
+                                    <g>
+                                        <polygon class="st3" points="27,16 11,32 12.4,32 28.4,16 			"></polygon>
+                                        <path class="st3" d="M1.2,25.6l9.6-9.6H9.4L1,24.4C1,24.8,1.1,25.2,1.2,25.6z"></path>
+                                        <path class="st3" d="M1.8,20.6l3.9-3.9C3.9,17.6,2.6,18.9,1.8,20.6z"></path>
+                                        <path class="st3" d="M2.5,28.7L15.2,16h-1.4L2,27.8C2.1,28.1,2.3,28.4,2.5,28.7z"></path>
+                                        <path class="st3" d="M4.8,30.8L19.6,16h-1.4L4,30.2C4.2,30.4,4.5,30.6,4.8,30.8z"></path>
+                                        <path class="st3" d="M8.1,31.9L24,16h-1.4L6.9,31.7C7.3,31.8,7.7,31.9,8.1,31.9z"></path>
+                                        <path class="st3" d="M43.4,17.3C43.4,17.3,43.4,17.3,43.4,17.3L28.6,32h1.4l14.1-14.1C43.9,17.7,43.6,17.5,43.4,17.3z"></path>
+                                        <path class="st3" d="M46.1,20.3c-0.2-0.3-0.3-0.6-0.5-0.9L33.1,32h1.4L46.1,20.3L46.1,20.3z"></path>
+                                        <path class="st3" d="M47,23.9c0-0.4-0.1-0.9-0.1-1.3c0,0,0,0,0,0L37.5,32h1.4L47,23.9C47,23.9,47,23.9,47,23.9z"></path>
+                                        <polygon class="st3" points="35.8,16 19.8,32 21.2,32 37.2,16 			"></polygon>
+                                        <polygon class="st3" points="31.4,16 15.4,32 16.8,32 32.8,16 			"></polygon>
+                                        <path class="st3" d="M41.3,16.3c-0.4-0.1-0.8-0.2-1.2-0.2L24.2,32h1.4L41.3,16.3C41.3,16.3,41.3,16.3,41.3,16.3z"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <div class="navIconText">TO DO</div>
+                    </div>
+                </a>
+            </li>
+            <li id="nav-accountactivity" ng-class="stateMatch('accountactivity')">
+                <a ui-sref="accountactivity.spend" href="#/accountactivity/spend/">
+                    <div class="navIcon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                            <g id="Account_Activity">
+                                <rect x="12" y="16" class="st3" width="1" height="22"></rect>
+                                <rect x="29" y="16" class="st3" width="1" height="22"></rect>
+                                <rect x="32" y="13" class="st3" width="1" height="22"></rect>
+                                <rect x="35" y="10" class="st3" width="1" height="22"></rect>
+                                <rect x="13" y="37" class="st3" width="16" height="1"></rect>
+                                <rect x="13" y="16" class="st3" width="16" height="1"></rect>
+                                <rect x="16" y="13" class="st3" width="16" height="1"></rect>
+                                <rect x="19" y="10" class="st3" width="16" height="1"></rect>
+                                <rect x="18" y="10" class="st3" width="1" height="3"></rect>
+                                <rect x="15" y="13" class="st3" width="1" height="3"></rect>
+                                <rect x="33" y="31" class="st3" width="2" height="1"></rect>
+                                <rect x="30" y="34" class="st3" width="2" height="1"></rect>
+                                <rect x="15" y="19" class="st3" width="12" height="1"></rect>
+                                <rect x="15" y="22" class="st3" width="12" height="1"></rect>
+                                <rect x="15" y="25" class="st3" width="12" height="1"></rect>
+                                <rect x="15" y="28" class="st3" width="12" height="1"></rect>
+                                <rect x="15" y="31" class="st3" width="12" height="1"></rect>
+                                <rect x="15" y="34" class="st3" width="12" height="1"></rect>
+                                <rect x="19" y="10.9" class="st3" width="16" height="2.1"></rect>
+                                <rect x="33" y="13" class="st3" width="2" height="18"></rect>
+                            </g>
+                        </svg>
+                        <div class="navIconText">Account Activity</div>
+                    </div>
+                </a>
+            </li>
+            <li id="nav-spendingzone" ui-sref-active="active">
+                <a ui-sref="spendingzone" href="#/spendingzone">
+                    <div class="navIcon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                            <g id="NEW_Spending__x2B__Budgets">
+                                <path class="st3" d="M10,28v0.8v1.5V31h5.9h7h4.7h0.4h2.2h5.9H37v-0.8v-1.5V28H10z M36,30h-6v-1h6V30z M10,23v0.7v1.5V26h3.7h4.2
+                                    h1.3h1.3h0.3h4.3H26v-0.7v-1.5V23H10z M25,25h-4.4h-0.3H19v-1h6V25z M10,33v0.7v1.5V36h5.1h5.8h3.6h0.3H25h6.2H32v-0.8v-1.5V33H10z
+                                     M31,35h-5.5h-0.3H25v-1h6V35z M10,21v-9h13v9H10z M25,21v-9h6v9H25z M33,21v-9h7v9H33z"></path>
+                            </g>
+                        </svg>
+                        <div class="navIconText">Spending + Budgets</div>
+                    </div>
+                </a>
+            </li>
+            <li id="nav-savingsengine" ui-sref-active="active" class="ng-scope">
+                <a ui-sref="savingsengine" href="#/savingsengine">
+                    <div class="navIcon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                            <g id="Savings">
+                                <path class="st3" d="M40,38V22.7v-3V16l-11,8H17l-9,8v6H6v1h2h32h2v-1H40z M39,19.7V24l-9,5H18l-9,8v-5l8-7h12l10-7V19.7z M19,9.3
+                                    l2,4l4.4,0.6L22.2,17l0.8,4.4L19,19.4l-3.9,2.1l0.8-4.4l-3.2-3.1l4.4-0.6L19,9.3z"></path>
+                            </g>
+                        </svg>
+                        <div class="navIconText">Savings Engine</div>
+                    </div>
+                </a>
+            </li><!-- end ngIf: !disableSavingsEngine -->
+            <!-- ngIf: disableSavingsEngine -->
+            <li id="nav-triple">
+                <ul>
+                    <li ng-class="stateMatch('preferences')"><a class="adaOutline" id="nav-triple-preferences" ui-sref="preferences.accountsetup" href="#/preferences/accountsetup/">Preferences</a></li>
+                    <li ng-click="updateShowCommunityList();" tabindex="0" role="button">
+                        <a id="nav-triple-community" ng-class="{'active':getShowCommunityList()}" target="_blank" ng-hide="AppModel.demo().isDemo" aria-hidden="false" class="">Community</a>
+                        <a id="nav-triple-community" class="ng-hide" ng-click="AppModel.demo().FeatureAlert()" title="Not available in Demo" ng-show="AppModel.demo().isDemo" tabindex="0" aria-hidden="true">Community</a>
+                    </li>
+                        <div id="NavCommunityPosts" class="communityPopup ng-hide" ng-show="getShowCommunityList()" click-outside="updateShowCommunityList(false);" aria-hidden="true">
+                            <div ng-show="hideBlogPosts" aria-hidden="true" class="ng-hide" style="">
+                                <h1>Recent Blog Posts</h1>
+                                <ul class="RecentPosts">
+                                    <!-- ngRepeat: post in blogPosts() --><li ng-repeat="post in blogPosts()" ng-class="{unread: !post.read}" ng-click="navheader.blogPostClick(post)" tabindex="0" ng-bind-html="post.subject" class="ng-binding ng-scope unread" role="button" style="">This Post Has a Question Mark In It?</li><!-- end ngRepeat: post in blogPosts() --><li ng-repeat="post in blogPosts()" ng-class="{unread: !post.read}" ng-click="navheader.blogPostClick(post)" tabindex="0" ng-bind-html="post.subject" class="ng-binding ng-scope unread" role="button">Test Post - Will Be Published Immediately</li><!-- end ngRepeat: post in blogPosts() --><li ng-repeat="post in blogPosts()" ng-class="{unread: !post.read}" ng-click="navheader.blogPostClick(post)" tabindex="0" ng-bind-html="post.subject" class="ng-binding ng-scope unread" role="button">Jay's Test Post</li><!-- end ngRepeat: post in blogPosts() --><li ng-repeat="post in blogPosts()" ng-class="{unread: !post.read}" ng-click="navheader.blogPostClick(post)" tabindex="0" ng-bind-html="post.subject" class="ng-binding ng-scope unread" role="button">Test Post #5 on 11/12 for Akshatha - testing testing</li><!-- end ngRepeat: post in blogPosts() --><li ng-repeat="post in blogPosts()" ng-class="{unread: !post.read}" ng-click="navheader.blogPostClick(post)" tabindex="0" ng-bind-html="post.subject" class="ng-binding ng-scope unread" role="button">Test Post #4 on 11/12 for Akshatha - testing testing</li><!-- end ngRepeat: post in blogPosts() -->
+                                    <li class="VisitInsideTheWallet">
+                                        <a href="/alservlet/JiveSingleSignonServlet?pncapp=VW" target="_blank" class="adaOutline">Visit Inside the Wallet <i class="offsiteLink fa fa-external-link fa-1"></i></a>
+                                        <p class="accent">A place for Virtual Wallet users and creators to learn and share</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div ng-show="!hideBlogPosts" aria-hidden="false" class="" style="">
+                                <h1>Community Site</h1>
+                                <ul class="RecentPosts">
+                                    <li class="VisitInsideTheWallet">
+                                        <a href="/alservlet/JiveSingleSignonServlet?pncapp=VW" class="adaOutline" target="_blank">Visit Inside the Wallet <i class="offsiteLink fa fa-external-link fa-1"></i></a>
+                                        <p class="accent">A place for Virtual Wallet users and creators to learn and share</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    <li class="todo" ng-class="{'active':getShowList()}" ng-click="updateShowList()" tabindex="0" role="button">
+                        <a id="nav-triple-todo" class="ng-binding">
+                            <span class="highlight rounded-sides ng-binding gray ng-hide" ng-class="{'orange': showV1, 'gray': !showV1}" ng-show="todoCount>0" aria-hidden="true"></span>
+                            To Do
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="NavTodoList" class="todoPopup ng-hide nav-todos" ng-show="getShowList()" click-outside="updateShowList(false)" aria-hidden="true">
+                        <todo-list todos="todoList" location="NAV" on-item-clicked="onTodoClick(item)" ng-show="!showV1 &amp;&amp; (todoCount>0 || $root.AppModel.getAdSlotStatus('adNav1_ON') || $root.AppModel.getAdSlotStatus('adNav1_ON'))" class="ng-isolate-scope ng-hide" aria-hidden="true"><ul class="todolist">
+    <!-- Regular TODOs -->
+    <!-- ngRepeat: item in $ctrl.todos track by $index -->
+    <!-- CIM OFFERS -->
+    <!-- ngIf: $ctrl.location == 'NAV' --><div ng-if="$ctrl.location == 'NAV'" class="ng-scope">
+        <div id="CIMOffer_NAV_1" ng-show="$root.AppModel.getAdSlotStatus('adNav1_ON')" aria-hidden="true" class="ng-hide">
+
+        </div>
+        <div id="CIMOffer_NAV_2" ng-show="$root.AppModel.getAdSlotStatus('adNav2_ON')" aria-hidden="true" class="ng-hide">
+
+        </div>
+    </div><!-- end ngIf: $ctrl.location == 'NAV' -->
+    <!-- ngIf: $ctrl.location == 'QUICK' -->
+</ul>
+</todo-list>
+                        <todo-list-v1 todos="todoList" location="NAV" on-item-clicked="onTodoClick(item)" ng-show="showV1 &amp;&amp; (todoCount>0 || $root.AppModel.getAdSlotStatus('adNav1_ON') || $root.AppModel.getAdSlotStatus('adNav1_ON'))" class="ng-isolate-scope ng-hide" aria-hidden="true"><ul class="todolist-v1">
+    <!-- ngIf: $root.AppModel.lastLogin() && $root.AppModel.totalSinceLogin() > 0 --><li ng-if="$root.AppModel.lastLogin() &amp;&amp; $root.AppModel.totalSinceLogin() > 0" class="ng-scope">
+        <i class="fa fa-circle" aria-hidden="true"></i>
+        <span class="todoText ng-binding">1 new transactions since last login Sep 18</span>
+    </li><!-- end ngIf: $root.AppModel.lastLogin() && $root.AppModel.totalSinceLogin() > 0 -->
+    <!-- Regular TODOs -->
+    <!-- ngRepeat: item in $ctrl.todos track by $index -->
+    <!-- CIM OFFERS -->
+    <!-- ngIf: $ctrl.location == 'QUICK-V1' -->
+</ul>
+</todo-list-v1>
+                        <!-- ngIf: !todoCount>0 && !$root.AppModel.getAdSlotStatus('adNav1_ON') && !$root.AppModel.getAdSlotStatus('adNav2_ON') --><div ng-if="!todoCount>0 &amp;&amp; !$root.AppModel.getAdSlotStatus('adNav1_ON') &amp;&amp; !$root.AppModel.getAdSlotStatus('adNav2_ON')" class="ng-binding ng-scope">
+                            Great job staying on top of things! You have no new to do items right now.</div><!-- end ngIf: !todoCount>0 && !$root.AppModel.getAdSlotStatus('adNav1_ON') && !$root.AppModel.getAdSlotStatus('adNav2_ON') -->
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <header id="pageTitleBar" ng-style="{'background-color': (AppModel.getTheme().primaryNavColor&amp;&amp;!hasBirthday&amp;&amp;!hasAnniversary)?AppModel.getTheme().primaryNavColor:''}">
+        <h1 class="ng-binding">Quick View</h1>
+        <h2 class="ng-binding">Get an overview of your account and check in with your money</h2>
+        <span class="changelog ng-hide ng-binding" ng-show="navheader.apptimestamp" aria-hidden="true">
+			<b>Git:</b> <span data-tooltip="" class="ng-binding"></span> <b>Built:</b> </span>
+    </header>
+    <health-indicator class=" healthIndicatorWrap "><!-- ngIf: healthIndicator.healthList.length>0 --></health-indicator>
+    <notification-indicator class="notificationWrap"><div class="confirmationDisplay ng-hide" aria-hidden="true">
+    <!-- ngRepeat: notification in notificationController.notificationFilter | unique:true -->
+    <div class="confirmationDisplayBtnDiv">
+        <button class="confirmationDisplayButton ng-hide" ng-click="undo()" ng-show="fromDelete" tabindex="0" aria-hidden="true">Undo</button>
+        <button class="confirmationDisplayButton" ng-click="view()" ng-show="!fromDelete" tabindex="0" aria-hidden="false">View</button>
+        <a class="confirmationDisplayClose" ng-click="close()" tabindex="0"><img src="/vw3/dev/data/img/close-x-white.png" alt="Close"></a>
+    </div>
+</div>
+</notification-indicator>
+    <iframe id="DFPClickTracking" height="1" width="1" style="visibility: hidden; position: fixed;"></iframe>
+</div>
+
+        <div class="main wrapper vwContainer clearfix">
+          <!-- uiView: --><main ui-view="" class="clearfix ng-scope"><div class="quickviewstate ng-scope" loading-container="$root.Loading.isLoading('getFeatures')"><div class="loading-pane ng-hide"><span class="fa fa-spinner fa-spin fa-4x"></span></div>
+
+<div id="quickview" class="quickview has-flush-full-height ng-scope" ng-controller="avocadoCtrl">
+    <section id="LeftCol" class="flush fullHeight quickviewAccountList">
+
+        <account-list balances="quickview.AccountsModelProvider.balances(quickview.BalanceTypeEnum.SPEND, quickview.BalanceTypeEnum.RESERVE, quickview.BalanceTypeEnum.GROWTH, quickview.BalanceTypeEnum.CREDITCARD)" investments="quickview.AccountsModelProvider.investments()" launch-wi-info="quickview.AccountsModelProvider.investmentsLaunchWiInfo()"  class="ng-isolate-scope">
+
+<div class="accountlist" loading-container="loading"><div class="loading-pane ng-hide"><span class="fa fa-spinner fa-spin fa-4x"></span></div>
+     <h1 class="gradientRule">ACCOUNTS</h1>
+    <!-- TODO Revise UI to account for Credit Card space issue - PB has solution ? -->
+
+    <ul class="accountsNav ng-scope" >
+        <li tabindex="0" class="spendLabel" ui-sref="accountactivity.spend" href="#/accountactivity/spend/">
+                <a class="sr-only ng-binding">Go to Account Activity for Spend $1,478.76</a>
+            <div class="accountLabel ng-binding">Spend</div>
+            <div class="balance ng-binding" ng-class="{'error': (balances | balancesByType:type:'balance') < 0}">
+                $1,478.76
+            </div>
+            <div aria-hidden="true" class="raquo">»</div>
+        </li><li tabindex="0" class="reserveLabel" ui-sref="accountactivity.reserve"  href="#/accountactivity/reserve" aria-hidden="false">
+                <a class="sr-only ng-binding">Go to Account Activity for Reserve $0.00</a>
+            <div class="accountLabel ng-binding">Reserve</div>
+            <div class="balance ng-binding" ng-class="{'error': (balances | balancesByType:type:'balance') < 0}">
+                $0.00
+            </div>
+            <div class="raquo">»</div>
+        </li><li tabindex="0"  class="growthLabel" ui-sref="accountactivity.growth" href="#/accountactivity/growth" aria-hidden="false">
+                <a class="sr-only ng-binding">Go to Account Activity for Growth $0.00</a>
+            <div class="accountLabel ng-binding">Growth</div>
+            <div class="balance ng-binding">
+                $0.00
+            </div>
+            <div aria-hidden="true" class="raquo">»</div>
+        </li><!-- end ngRepeat: type in walletTypes track by type.$name -->
+        <li class="total ng-binding" aria-hidden="false">
+            Total: $1,478.76
+        </li>
+        <li tabindex="0" class="creditCardLabel" href="#/accountactivity/credit">
+            <a class="sr-only ng-binding">Go to Account Activity for Credit Card </a>
+            <div aria-hidden="true" class="accountLabel">Credit Card</div>
+            <div aria-hidden="true" class="balance ng-binding" >
+                
+            </div>
+            <div aria-hidden="true" class="raquo">»</div>
+        </li>
+        <li tabindex="0" class="investmentsLabel ng-hide" id="investmentsLink" ng-click="launchInvestments()" enter-click="" role="button">
+            <a class="sr-only ng-binding">Go to Account Activity for Investments $0.00</a>
+            <div aria-hidden="true" class="accountLabel">Investments</div>
+            <div aria-hidden="true" class="balance ng-binding" >
+            	$0.00
+            </div>
+            <div aria-hidden="true" class="raquo">»</div>
+        </li>
+        <li tabindex="0" class="onlineStatementsLabel" ui-sref="accountactivity.statements" href="#/accountactivity/statements">
+            <a class="sr-only">Go to Online Statements</a>
+            <div aria-hidden="true" class="accountLabel">Online Statements</div>
+            <div aria-hidden="true" class="raquo">»</div>
+        </li>
+    </ul><!-- end ngIf: !loading -->
+</div>
+</account-list>
+
+        <punch-the-pig has-birthday="hasBirthday" has-anniversary="hasAnniversary" class="ng-isolate-scope"><!-- ngIf: showPTP --><div class="punchthepig ng-scope" ng-class="{pigHeight:rule}" ng-if="showPTP">
+      <!-- Loading Container -->
+      <!-- ngIf: rule -->
+</div><!-- end ngIf: showPTP -->
+</punch-the-pig>
+
+        <transfer-pod transfer-accounts="quickview.transferaccounts()" accounts="quickview.AccountsModelProvider.accounts()" class="ng-isolate-scope"><!-- ngIf: hasTransferAccounts --><form name="form.formTransferPod" class="standardForm ng-pristine ng-scope ng-valid-no-negative-from-account ng-invalid ng-invalid-required ng-valid-max-transfer-pod" role="form" novalidate="novalidate" ng-if="hasTransferAccounts">
+<div class="transferPod transferFundsSection" ng-show="step == 0" tabindex="0" aria-label="Transfer funds" aria-hidden="false">
+    <h1 class="gradientRule">Transfer Funds</h1>
+
+    <div class="PaydayForm">
+        <label for="fromAccount">From</label>
+        <div>
+            <select class="adaOutline ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-no-negative-from-account" required="" no-negative-from-account="" ng-change="UpdateFromAccount()" ng-model="transferForm.fromAccountText" tabindex="0" aria-required="false" aria-invalid="false">
+                <!-- ngRepeat: option in BuildAcctList(transferAccounts.fromAccounts) --><option ng-repeat="option in BuildAcctList(transferAccounts.fromAccounts)" value="Spend : $1,478.76" ng-bind-html="option.dropDisplay" class="ng-binding ng-scope">Spend : $1,478.76</option><!-- end ngRepeat: option in BuildAcctList(transferAccounts.fromAccounts) --><option ng-repeat="option in BuildAcctList(transferAccounts.fromAccounts)" value="Business Enterprise Checking X1995: $437.59" ng-bind-html="option.dropDisplay" class="ng-binding ng-scope">Business Enterprise Checking X1995: $437.59</option><!-- end ngRepeat: option in BuildAcctList(transferAccounts.fromAccounts) -->
+            </select>
+            <div ng-messages="" class="error ng-inactive" for="form.formTransferPod.fromAccount.$error" aria-live="assertive">
+                <!-- ngMessage: -->
+            </div>
+            <div class="error">
+                <div class="ng-hide" ng-show="transferForm.fromAccount.accountBalance <= 0 &amp;&amp; !form.formTransferPod.fromAccount.$error.noNegativeFromAccount" aria-hidden="true">Sorry this account has no available funds</div>
+            </div>
+            <!-- ngIf: showGrowthTransfers && growthTransfers() -->
+        </div>
+        <label for="toAccount">To</label>
+        <div>
+            <select class="adaOutline ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required="" ng-model="transferForm.toAccountText" ng-change="setAccounts()" tabindex="0" aria-required="true" aria-invalid="true"><option value="? object:null ?"></option>
+                <!-- ngRepeat: option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId) --><option ng-repeat="option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId)" value="Reserve : $0.00" ng-bind-html="option.dropDisplay" class="ng-binding ng-scope">Reserve : $0.00</option><!-- end ngRepeat: option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId) --><option ng-repeat="option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId)" value="Growth : $0.00" ng-bind-html="option.dropDisplay" class="ng-binding ng-scope">Growth : $0.00</option><!-- end ngRepeat: option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId) --><option ng-repeat="option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId)" value="Business Enterprise Checking X1995: $437.59" ng-bind-html="option.dropDisplay" class="ng-binding ng-scope">Business Enterprise Checking X1995: $437.59</option><!-- end ngRepeat: option in BuildAcctList(transferAccounts.toAccounts, transferForm.fromAccount.accountId) -->
+            </select>
+            <div class="ccText ng-hide" ng-show="transferForm.toAccount.accountType=='CCA'" aria-hidden="true">
+                <p>Note: Same day transfers to a credit card account scheduled at or before 5pm ET will be posted (credited) effective that day; transfers scheduled after 5pm ET will be posted (credited) effective the next day.</p>
+            </div>
+        </div>
+        <label for="amount">Amount</label>
+        <div>
+          <input type="text" name="amount" class="adaOutline ng-pristine ng-untouched ng-scope ng-empty ng-invalid ng-invalid-required ng-valid-max-transfer-pod" max-transfer-pod="1478.76" ng-model="transferForm.amount" ng-model-options="{ allowInvalid: true }" required="" ng-keypress="validateCharacter($event)" ng-focus="setUnformattedValue($event)" ng-blur="validateFormat($event);" tabindex="0" aria-required="true" aria-invalid="true">
+        </div>
+    </div>
+    <div ng-messages="" class="error ng-hide ng-active" for="form.formTransferPod.amount.$error" ng-show="form.formTransferPod.amount.$touched || form.formTransferPod.amount.$submitted" aria-live="assertive" aria-hidden="true">
+        <!-- ngMessage: --><div ng-message="" when="required" class="ng-scope">Please enter an amount</div>
+        <!-- ngMessage: -->
+    </div>
+    <div class="actions">
+        <button ng-disabled="form.formTransferPod.$invalid || transferForm.fromAccount.accountBalance <= 0 || form.formTransferPod.fromAccount.$error.noNegativeFromAccount" disabled="disabled" ng-click="Review()" tabindex="0" aria-label="Review Transfer disabled" aria-disabled="true">Review Transfer</button>
+    </div>
+
+</div>
+
+<!-- ngIf: step == 1 --></form><!-- end ngIf: hasTransferAccounts -->
+
+</transfer-pod>
+    </section>
+    <!-- ngIf: hasBirthday -->
+    <!-- ngIf: hasAnniversary && !hasBirthday -->
+    <div class="main-col aboveTitle">
+        <section id="TopPod" class="todoPod inline ng-hide" ng-show="quickview.todoList().length > 0 || $root.AppModel.getAdSlotStatus('adQuick1_ON') || $root.AppModel.getAdSlotStatus('adQuick2_ON')" aria-hidden="true">
+            <h1 class="gradientRule">To Do</h1>
+            <todo-list todos="quickview.todoList()" location="QUICK" class="ng-isolate-scope"><ul class="todolist">
+    <!-- Regular TODOs -->
+    <!-- ngRepeat: item in $ctrl.todos track by $index -->
+    <!-- CIM OFFERS -->
+    <!-- ngIf: $ctrl.location == 'NAV' -->
+    <!-- ngIf: $ctrl.location == 'QUICK' --><div ng-if="$ctrl.location == 'QUICK'" class="ng-scope">
+        <div id="CIMOffer_QUICK_1" ng-show="$root.AppModel.getAdSlotStatus('adQuick1_ON')" aria-hidden="true" class="ng-hide">
+
+        </div>
+        <div id="CIMOffer_QUICK_2" ng-show="$root.AppModel.getAdSlotStatus('adQuick2_ON')" aria-hidden="true" class="ng-hide">
+
+        </div>
+    </div><!-- end ngIf: $ctrl.location == 'QUICK' -->
+</ul>
+</todo-list> 
+        </section>
+
+        <section id="LeftPod" class="quickPod">
+            <h1 class="gradientRule">TO DO</h1>
+
+            <img class="avocado2" src="Images2/avocado.png" ng-show="paymentSet">
+            <p>&bull; You have a payday coming up</p>
+            <p>&bull; Use your Avocado Toast tool</p>
+            <p>&bull; confirm your pre authorized payments</p>
+            <p>&bull; you have 3 new e-bills to review</p>
+            <p ng-show="paymentSet"><b>&bull; <a href="https://deliveryqa-staging.pnc.com/en/apps/loans/auto-loans.html#/?source">check out</a> these auto loans!</b></p>
+        </section>
+
+        <section id="RightPod" class="quickPod">
+            <h1 class="gradientRule">Calendar</h1>
+            <next3days class="inline ng-isolate-scope" current-date="$root.AppModel.currentDate()" bank-holidays-by-date="quickview.bankHolidaysByDate()" theme-events-by-date="quickview.themeEventsByDate(quickview.themePref)" deposits-by-date="quickview.depositsByDate()" withdrawals-by-date="quickview.withdrawalsByDate()" credit-card-transactions-by-date="quickview.creditCardTransactionsByDate()" internal-transfers-by-date="quickview.internalTransfersByDate()" external-transfers-by-date="quickview.externalTransfersByDate()" internal-payments="quickview.internalPayments()" internal-payments-by-date="quickview.internalPaymentsByDate()" external-payments-by-date="quickview.externalPaymentsByDate()" realtime-payments-by-date="quickview.realtimePaymentsByDate()" paydays-by-date="quickview.paydaysByDate()" checks-you-wrote="quickview.checksYouWrote()" pips-by-date="quickview.pipsByDate()" swps-by-date="quickview.swpsByDate()" preauthorized-payments-by-date="quickview.preauthorizedPaymentsByDate()" reserve-items-by-date="quickview.reserveItemsByDate()" bill-reminders="quickview.billReminders()" bill-reminders-by-date="quickview.billRemindersByDate()" payees-by-id="quickview.payeesById()" projected-balances="quickview.balances(quickview.BalanceTypeEnum.PROJECTED)" handler="quickview.handler" set-range="quickview.setRange(startMoment, endMoment)" credit-card-pending-charges="quickview.AccountsModelProvider.accounts() | balancesByType:'CREDITCARD':'pendingCharges'" payee-groups="quickview.payeeGroups()" payees-by-group="quickview.payeesByGroup()" ebills="quickview.ebills()"><div class="next3days">
+    <!-- ngIf: dayDetail -->
+    <!--<div>Deposits: {{deposits["10/14/2014"]}}</div>-->
+    <div class="mainCal">
+        <div class="weekHeader">
+            <!-- @TODO: repeat only for 3 days shown (now going  7) -->
+            <!-- ngRepeat: dayName in mvc.dayHeaders track by $index --><div  class="weekHeaderTitle ng-binding ng-scope">
+                Today
+            </div><!-- end ngRepeat: dayName in mvc.dayHeaders track by $index --><div  class="weekHeaderTitle ng-binding ng-scope">
+                Tomorrow
+            </div><!-- end ngRepeat: dayName in mvc.dayHeaders track by $index --><div  class="weekHeaderTitle ng-binding ng-scope">
+                Sunday
+            </div><!-- end ngRepeat: dayName in mvc.dayHeaders track by $index -->
+        </div>
+        <div class="weeks ng-binding" oncontextmenu="return false;"><div class="week ng-scope" style="top: 0px" oncontextmenu="return false;"><div class="dayview vw_app_component_panel_calendar_monthview ui-droppable" id="September_29_2017"><div ng-click="showMore('09/19/2017')" aria-label="September 29 button" role="presentation" loading-container="false" class="dayContainer calendarDayMonthView isHistoric isToday" enter-click="" tabindex="0"><div class="loading-pane ng-hide"><span class="fa fa-spinner fa-spin fa-4x"></span></div><div class="dateCal "><div class="dateCalNumber">29</div></div><div class="lozengeContainer" ng-click="intercept($event)" tabindex="-1" role="presentation" data-groupid="September_29_2017"><div class="dayText"></div><!-- ngIf: true -->
+
+        <!--<div class="withdrawlLozenge ignore-drag ng-scope" ng-if="true"><div class="lozengeAmount" aria-label="Total withdrawals -$300.00">-$300.00</div></div><!-- end ngIf: true --></div></div></div><div class="dayview vw_app_component_panel_calendar_monthview ui-droppable" id="September_30_2017"><div ng-click="showMore('09/20/2017')" aria-label="September 30 button" role="presentation" loading-container="false" class="dayContainer calendarDayMonthView isScheduled" enter-click="" tabindex="0"><div class="loading-pane ng-hide"><span class="fa fa-spinner fa-spin fa-4x"></span></div><div class="dateCal "><div class="dateCalNumber">30</div></div><div class="lozengeContainer" ng-click="intercept($event)" tabindex="-1" role="presentation" data-groupid="September_30_2017"><div class="dayText"></div></div></div></div><div class="dayview vw_app_component_panel_calendar_monthview ui-droppable" id="October_1_2017"><div ng-click="showMore('10/1/2017')" aria-label="October 1 button" role="presentation" loading-container="false" class="dayContainer calendarDayMonthView isScheduled" enter-click="" tabindex="0"><div class="loading-pane ng-hide"><span class="fa fa-spinner fa-spin fa-4x"></span></div><div class="dateCal "><div class="dateCalNumber">1</div></div><div class="lozengeContainer" ng-click="intercept($event)" tabindex="-1" role="presentation" data-groupid="October_1_2017"><div class="dayText"></div>
+
+        <div ng-repeat="card in cards">
+            <div ng-show="paymentSet" class="calendarCards" ng-style="{'background-color':card.color}">- {{card.payment | currency:"$":0}}</div>
+        </div>
+
+        </div></div></div></div></div>
+    </div>
+    <!-- ngIf: dayDetail -->
+</div></next3days>
+
+            <div class="bottomLink">
+                <a ui-sref="calendar" href="#/calendar">View full Calendar »</a>
+            </div>
+        </section>
+
+        <section id="NextPod" class="threeFour bottomPod avocadoPod">
+            <h1 class="gradientRule">Avocado Toast</h1>
+            <img class="avocado" src="Images2/avocado.png">
+            <p>Adjust your payment cadence below. When you're comfortable with your payment
+            <br>
+            amounts click Set Payment to add them to your calendar.</p>
+            <div id="debtCards">
+                <div ng-repeat="card in cards">
+                    <div class="eachCard" ng-style="{'outline-color': card.color}">
+                        <div class="cardLeftBox" ng-style="{'background-color': card.color}">
+                            <p>Next on:</p>
+                            <p>{{card.nextPay}}</p>
+                        </div>
+                        <div class="cardMiddleInfo">
+                            <p>{{card.name}}</p>
+                            <p>balance {{card.balance | currency:"$":0}}</p>
+                            <p>{{card.interest}}% interest</p>
+                        </div>
+                        <div class="cardRightInfo">
+                            <p>payment</p>
+                            <p><input  id="repeat{{$index + 1}}" type="text" ng-model="card.payment"></p>
+                            <p>paid off in {{cwCalc(card.balance, card.payment, card.interest, 'months')}} months</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="donutChart"></div>
+            <div id="paymentAmount">{{totalAmount | currency:"$":0}}</div>
+            <div id="yourPayment">your payment</div>
+            <div class="setPaymentBtn" ng-click="paymentSet = true; scrollTop()">Set Payment</div>
+    
+        </section>
+        
+
+        <section id="BottomPod" class="threeFour bottomPod">
+            <h1 class="gradientRule">Recent Transactions</h1>
+            <recent-transactions-list historical-transactions="quickview.WalletActivitiesModelProvider.historical()" categorized-transactions="quickview.TransactionCategoryModelProvider.transactionsById()" categories="quickview.TransactionCategoryModelProvider.categoriesById()" earliest-load-requested="quickview.earliestLoadRequested" earliest-load-received="quickview.earliestLoadReceived" last-login="$root.AppModel.lastLogin()" class="ng-isolate-scope"><div class="recenttransactions" loading-container="rt.loading"><div class="loading-pane ng-hide"><span class="fa fa-spinner fa-spin fa-4x"></span></div>
+
+    <div class="header">
+        <!-- ngIf: rt.lastLogin --><p class="new ng-binding ng-scope" ng-if="rt.lastLogin">
+            1 new since you logged in Sep 18.
+        </p><!-- end ngIf: rt.lastLogin -->
+
+        <div class="pull-right transactionDropdown">
+            <p>Show me:</p>
+
+            <pnc-drop-down menu="menu" hash-key="recentTransaction" class="ng-isolate-scope"><div class="pncdropwdown" >
+
+	<div class="dropdown dropdown-menu-right" bindid="pncDropDown2017-09-19T12:39:19.840Z" uib-dropdown="" adv-keyboard-nav="">
+		<!-- ngIf: ::$ctrl.menu.useButton --><button  tabindex="0" type="button" class="dropdown-toggle ng-scope link adaOutline" id="pncDropDown2017-09-19T12:39:19.840Z"  uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+			<span  class="ng-binding">3 Days</span>
+			<span class="fa fa-sort-desc dropdown-caret"></span>
+		</button><!-- end ngIf: ::$ctrl.menu.useButton -->
+
+		<!-- ngIf: ::!$ctrl.menu.useButton -->
+
+		<ul uib-dropdown-menu="" class="dropdown-menu" role="menu" aria-labelledby="pncDropDown2017-09-19T12:39:19.840Z">
+		
+			<!-- ngRepeat: menuitem in $ctrl.menu.options --><li index="0"  role="menuitem" ng-class="::{ catSelected : menuitem.catSelected, bar : ( menuitem.divider &amp;&amp; !menuitem.subMenuOpen ), adaOutline : true, selected : menuitem.selected }" ng-attrs="" class="ng-scope adaOutline">	
+					<a tabindex="0" role="menuitem" ng-attrs="">
+
+					<i tabindex="-1" aria-hidden="true" class="fa fa-check ng-hide"></i>
+					<span ng-bind-html="::menuitem.name" class="ng-binding">1 Day</span>
+
+					<!-- ngIf: ::$ctrl.menu.catTransClass && menuitem.options.length > 0 -->
+					</a>
+
+				<!-- ngIf: menuitem.options.length > 0 && menuitem.subMenuOpen -->
+			</li><!-- end ngRepeat: menuitem in $ctrl.menu.options --><li index="1" role="menuitem" ng-class="::{ catSelected : menuitem.catSelected, bar : ( menuitem.divider &amp;&amp; !menuitem.subMenuOpen ), adaOutline : true, selected : menuitem.selected }" ng-attrs="" class="ng-scope adaOutline">	
+					<a tabindex="0" role="menuitem"  ng-attrs="">
+
+					<i  tabindex="-1" aria-hidden="true" class="fa fa-check ng-hide"></i>
+					<span ng-bind-html="::menuitem.name" class="ng-binding">3 Days</span>
+
+					<!-- ngIf: ::$ctrl.menu.catTransClass && menuitem.options.length > 0 -->
+					</a>
+
+				<!-- ngIf: menuitem.options.length > 0 && menuitem.subMenuOpen -->
+			</li><!-- end ngRepeat: menuitem in $ctrl.menu.options --><li index="2" ng-class="::{ catSelected : menuitem.catSelected, bar : ( menuitem.divider &amp;&amp; !menuitem.subMenuOpen ), adaOutline : true, selected : menuitem.selected }" ng-attrs="" class="ng-scope bar adaOutline">	
+					<a tabindex="0" role="menuitem" ng-attrs="">
+
+					<i tabindex="-1" aria-hidden="true" class="fa fa-check ng-hide"></i>
+					<span ng-bind-html="::menuitem.name" class="ng-binding">5 Days</span>
+
+					<!-- ngIf: ::$ctrl.menu.catTransClass && menuitem.options.length > 0 -->
+					</a>
+
+				<!-- ngIf: menuitem.options.length > 0 && menuitem.subMenuOpen -->
+			</li><!-- end ngRepeat: menuitem in $ctrl.menu.options --><li index="3" role="menuitem" ng-class="::{ catSelected : menuitem.catSelected, bar : ( menuitem.divider &amp;&amp; !menuitem.subMenuOpen ), adaOutline : true, selected : menuitem.selected }" ng-attrs="" class="ng-scope adaOutline">	
+					<a tabindex="0" role="menuitem" ng-attrs="">
+
+					<i tabindex="-1" aria-hidden="true" class="fa fa-check ng-hide"></i>
+					<span ng-bind-html="::menuitem.name" class="ng-binding">5 Transactions</span>
+
+					<!-- ngIf: ::$ctrl.menu.catTransClass && menuitem.options.length > 0 -->
+					</a>
+
+				<!-- ngIf: menuitem.options.length > 0 && menuitem.subMenuOpen -->
+			</li><!-- end ngRepeat: menuitem in $ctrl.menu.options --><li index="4" role="menuitem" ng-class="::{ catSelected : menuitem.catSelected, bar : ( menuitem.divider &amp;&amp; !menuitem.subMenuOpen ), adaOutline : true, selected : menuitem.selected }" ng-attrs="" class="ng-scope adaOutline">	
+					<a tabindex="0" role="menuitem" ng-attrs="">
+
+					<i tabindex="-1" aria-hidden="true" class="fa fa-check ng-hide"></i>
+					<span ng-bind-html="::menuitem.name" class="ng-binding">10 Transactions</span>
+
+					<!-- ngIf: ::$ctrl.menu.catTransClass && menuitem.options.length > 0 -->
+					</a>
+
+				<!-- ngIf: menuitem.options.length > 0 && menuitem.subMenuOpen -->
+			</li><!-- end ngRepeat: menuitem in $ctrl.menu.options --><li index="5" role="menuitem" ng-class="::{ catSelected : menuitem.catSelected, bar : ( menuitem.divider &amp;&amp; !menuitem.subMenuOpen ), adaOutline : true, selected : menuitem.selected }" ng-attrs="" class="ng-scope adaOutline">	
+					<a tabindex="0" role="menuitem" ng-attrs="">
+
+					<i tabindex="-1" aria-hidden="true" class="fa fa-check ng-hide"></i>
+					<span ng-bind-html="::menuitem.name" class="ng-binding">15 Transactions</span>
+
+					<!-- ngIf: ::$ctrl.menu.catTransClass && menuitem.options.length > 0 -->
+					</a>
+
+				<!-- ngIf: menuitem.options.length > 0 && menuitem.subMenuOpen -->
+			</li><!-- end ngRepeat: menuitem in $ctrl.menu.options -->
+		</ul>
+	</div>
+</div></pnc-drop-down>
+            
+        </div>
+
+
+    </div>
+    <table ng-table="rt.tableParams" ng-show="rt.currentRange" template-pagination="" template-header="recent_transactions_header" role="grid" aria-label="List of Recent Transactions" ng-animate-children="" class="ng-scope ng-table" aria-hidden="false" style=""><!-- ngInclude: templates.header --><thead ng-include="templates.header" class="ng-scope">
+    <tr class="ng-scope">
+        <!-- ngRepeat: $column in $columns track by $index --><th ng-repeat="$column in $columns track by $index" ng-class="{
+                        'sortable': $column.sortable(this),
+                        'sort-asc': params.sorting()[$column.sortable(this)]=='asc',
+                        'sort-desc': params.sorting()[$column.sortable(this)]=='desc'
+                      }" ng-click="sortBy($column, $event)" ng-show="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header date Date" tabindex="-1" scope="col" role="columnheader" aria-hidden="false">
+              <!-- ngIf: !template --><div ng-if="!template" ng-show="!template" class="ng-table-header ng-scope" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'div','text-right':$column.title(this) == 'Amount'}" aria-hidden="false">
+                <span ng-bind="$column.title(this)" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'span'}" class="ng-binding">Date</span>
+              </div><!-- end ngIf: !template -->
+              <!-- ngIf: template -->
+        </th><!-- end ngRepeat: $column in $columns track by $index --><th ng-repeat="$column in $columns track by $index" ng-class="{
+                        'sortable': $column.sortable(this),
+                        'sort-asc': params.sorting()[$column.sortable(this)]=='asc',
+                        'sort-desc': params.sorting()[$column.sortable(this)]=='desc'
+                      }" ng-click="sortBy($column, $event)" ng-show="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header description Description" tabindex="-1" scope="col" role="columnheader" aria-hidden="false">
+              <!-- ngIf: !template --><div ng-if="!template" ng-show="!template" class="ng-table-header ng-scope" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'div','text-right':$column.title(this) == 'Amount'}" aria-hidden="false">
+                <span ng-bind="$column.title(this)" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'span'}" class="ng-binding">Description</span>
+              </div><!-- end ngIf: !template -->
+              <!-- ngIf: template -->
+        </th><!-- end ngRepeat: $column in $columns track by $index --><th ng-repeat="$column in $columns track by $index" ng-class="{
+                        'sortable': $column.sortable(this),
+                        'sort-asc': params.sorting()[$column.sortable(this)]=='asc',
+                        'sort-desc': params.sorting()[$column.sortable(this)]=='desc'
+                      }" ng-click="sortBy($column, $event)" ng-show="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header account Account" tabindex="-1" scope="col" role="columnheader" aria-hidden="false">
+              <!-- ngIf: !template --><div ng-if="!template" ng-show="!template" class="ng-table-header ng-scope" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'div','text-right':$column.title(this) == 'Amount'}" aria-hidden="false">
+                <span ng-bind="$column.title(this)" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'span'}" class="ng-binding">Account</span>
+              </div><!-- end ngIf: !template -->
+              <!-- ngIf: template -->
+        </th><!-- end ngRepeat: $column in $columns track by $index --><th ng-repeat="$column in $columns track by $index" ng-class="{
+                        'sortable': $column.sortable(this),
+                        'sort-asc': params.sorting()[$column.sortable(this)]=='asc',
+                        'sort-desc': params.sorting()[$column.sortable(this)]=='desc'
+                      }" ng-click="sortBy($column, $event)" ng-show="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header category Category" tabindex="-1" scope="col" role="columnheader" aria-hidden="false">
+              <!-- ngIf: !template --><div ng-if="!template" ng-show="!template" class="ng-table-header ng-scope" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'div','text-right':$column.title(this) == 'Amount'}" aria-hidden="false">
+                <span ng-bind="$column.title(this)" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'span'}" class="ng-binding">Category</span>
+              </div><!-- end ngIf: !template -->
+              <!-- ngIf: template -->
+        </th><!-- end ngRepeat: $column in $columns track by $index --><th ng-repeat="$column in $columns track by $index" ng-class="{
+                        'sortable': $column.sortable(this),
+                        'sort-asc': params.sorting()[$column.sortable(this)]=='asc',
+                        'sort-desc': params.sorting()[$column.sortable(this)]=='desc'
+                      }" ng-click="sortBy($column, $event)" ng-show="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header amount Amount" tabindex="-1" scope="col" role="columnheader" aria-hidden="false">
+              <!-- ngIf: !template --><div ng-if="!template" ng-show="!template" class="ng-table-header ng-scope text-right" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'div','text-right':$column.title(this) == 'Amount'}" aria-hidden="false" style="">
+                <span ng-bind="$column.title(this)" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'span'}" class="ng-binding">Amount</span>
+              </div><!-- end ngIf: !template -->
+              <!-- ngIf: template -->
+        </th><!-- end ngRepeat: $column in $columns track by $index -->
+    </tr>
+    <tr  aria-hidden="true">
+        <!-- ngRepeat: $column in $columns --><th data-title-text="Date" ng-repeat="$column in $columns " ng-show="$column.show(this)" aria-hidden="false">
+            <!-- ngRepeat: (name, filter) in $column.filter(this) -->
+        </th><!-- end ngRepeat: $column in $columns --><th data-title-text="Description" ng-repeat="$column in $columns " ng-show="$column.show(this)"  aria-hidden="false">
+            <!-- ngRepeat: (name, filter) in $column.filter(this) -->
+        </th><!-- end ngRepeat: $column in $columns --><th data-title-text="Account" ng-repeat="$column in $columns " ng-show="$column.show(this)" aria-hidden="false">
+            <!-- ngRepeat: (name, filter) in $column.filter(this) -->
+        </th><!-- end ngRepeat: $column in $columns --><th data-title-text="Category" ng-repeat="$column in $columns " ng-show="$column.show(this)" aria-hidden="false">
+            <!-- ngRepeat: (name, filter) in $column.filter(this) -->
+        </th><!-- end ngRepeat: $column in $columns --><th data-title-text="Amount" ng-repeat="$column in $columns " ng-show="$column.show(this)" aria-hidden="false">
+            <!-- ngRepeat: (name, filter) in $column.filter(this) -->
+        </th><!-- end ngRepeat: $column in $columns -->
+    </tr>
+</thead>
+        <!-- ngIf: $data.length > 0 --><tbody ng-if="$data.length > 0" class="ng-scope">
+
+            <!-- individual transaction -->
+            <!-- ngRepeat: transaction in $data track by transaction.uniqueId --><tr ng-repeat="transaction in $data track by transaction.uniqueId" ng-class="{'pending':transaction.isPending}" class="ng-scope pending" style="">
+                <td data-title="'Date'" data-header-class="'date'" class="date new" ng-class="{new:rt.isNew(transaction)}" data-title-text="Date" style="">
+                    <!-- ngIf: transaction.isPending --><span ng-if="transaction.isPending" class="ng-binding ng-scope">Pending<br>Jul 13</span><!-- end ngIf: transaction.isPending -->
+                    <!-- ngIf: !transaction.isPending -->
+                </td>
+                <td data-title="'Description'" data-header-class="'description'" class="description enriched-description cursor-correct" enriched-description="" data-title-text="Description"><!-- ngIf: transaction.simpleDescription -->
+
+<ng-transclude>
+                    <span ng-bind-html="transaction.simpleDescription || transaction.description" class="ng-binding ng-scope">OPERATING ENGINEER CARD#3355</span>
+                </ng-transclude>
+
+<!-- ngIf: transaction.simpleDescription && transaction.expanded -->
+</td>
+                <td data-title="'Account'" data-header-class="'account'" class="account ng-binding" data-title-text="Account">
+                    Spend
+                </td>
+                <td data-title="'Category'" data-header-class="'category'" class="category" data-title-text="Category">
+                    <categorized-transaction transaction="transaction" class="ng-isolate-scope"><div class="categorizedTransaction">
+    <div>
+        <!-- ngSwitchWhen: HAS_CAT -->
+        <!-- ngSwitchDefault: --><div ng-switch-default="" class="ng-scope">
+            <span  class="ng-binding"></span>
+        </div><!-- end ngSwitchWhen: -->
+    </div>
+</div>
+</categorized-transaction>
+                </td>
+                <td data-title="'Amount'" data-header-class="'amount'" class="amount ng-binding" data-title-text="Amount">
+                	<span class="transactionType transactionType_spend">
+	                	<!-- ngIf: transaction.account.key == 'credit' -->
+	                  <!-- ngIf: transaction.account.key != 'credit' --><span ng-if="transaction.account.key != 'credit'" class="ng-binding ng-scope"><!-- Use Default Sign -->
+	                  	-
+	                  </span><!-- end ngIf: transaction.account.key != 'credit' -->
+                  </span>
+                  $300.00
+                </td>
+
+            </tr><!-- end ngRepeat: transaction in $data track by transaction.uniqueId -->
+
+        </tbody><!-- end ngIf: $data.length > 0 -->
+
+        <!-- ngIf: $data.length == 0 -->
+
+    </table><div ng-table-pagination="params" template-url="templates.pagination" class="ng-scope ng-isolate-scope"><!-- ngInclude: templateUrl --><div ng-include="templateUrl" class="ng-scope"><!-- ngIf: params.data.length --><div class="ng-table-pager ng-scope" ng-if="params.data.length"> <!-- ngIf: params.settings().counts.length --> <ul class="pagination ng-table-pagination"> <!-- ngRepeat: page in pages --> </ul> </div><!-- end ngIf: params.data.length --> </div></div>
+
+</div>
+
+<!--TABLE HEADER TEMPLATE !-->
+
+<script type="text/ng-template" id="recent_transactions_header">
+    <tr>
+        <th
+            ng-repeat="$column in $columns track by $index"
+            ng-class="{
+                        'sortable': $column.sortable(this),
+                        'sort-asc': params.sorting()[$column.sortable(this)]=='asc',
+                        'sort-desc': params.sorting()[$column.sortable(this)]=='desc'
+                      }"
+            ng-click="sortBy($column, $event)"
+            ng-show="$column.show(this)"
+            ng-init="template = $column.headerTemplateURL(this)"
+            class="header {{$column.class(this)}} {{$column.title(this)}} "
+            tabindex="-1"
+            scope="col"
+            role="columnheader">
+              <div ng-if="!template" ng-show="!template" class="ng-table-header" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'div','text-right':$column.title(this) == 'Amount'}">
+                <span ng-bind="$column.title(this)" ng-class="{'sort-indicator': $column.sortIndicator(this) == 'span'}"></span>
+              </div>
+              <div ng-if="template" ng-show="template" ng-include="template"></div>
+        </th>
+    </tr>
+</script>
+</recent-transactions-list>
+            <div class="bottomLink">
+                <a ui-sref="accountactivity.spend" href="#/accountactivity/spend/">
+                    View full Account Activity »
+                </a>
+            </div>
+        </section>
+    </div>
+
+</div></div>
+</main>
+        </div>
+
+        <!-- Browserify bundle -->
+        <script src="/vw3/dev/libraries-5633cd66d3.js"></script>
+        <script src="/vw3/dev/bundle-1d58d424d1.js"></script>
+      <!----><!--[endif]---->
+
+      <!-- Render warning for all other browsers -->
+      <!--[if (lte IE 8)]>
+        <div class="browser-warning">
+          Virtual Wallet is not supported in IE 8 or below. Please update your browser.
+        </div>
+      <![endif]-->
+
+      </div>
+    </div> <!-- minWrapper -->
+
+    <!-- footer v3 -->
+    
+<div id="footer">
+	
+	<div class="footerContent">
+		<div id="footerRule"></div>
+       
+		<ul>
+			<li>
+				<a href="#" onclick="openGuaranteeWindow();return false;" title="Online Banking and Bill Pay Guarantee">Online Banking &amp; Bill Pay Guarantee</a> | 
+				<a href="#" onclick="openServiceAgreementWindow();return false;" title="Service Agreement">Service Agreement</a> | 
+				<a href="#" onclick="openPrivacy();return false;" class="tipMe" title="PNC respects the privacy of our customers and is committed to protecting your information with the same care we utilize for all PNC transactions. Click to view the details of our consumer privacy principles.">Privacy Policy</a> | 
+				<a href="#" class="tipMe" onclick="openSecurityCenterWindow();return false;" title="Security is a priority at PNC. We are committed to protecting the security and confidentiality of your financial information. Click to learn more about how we protect you and how you can protect yourself.">Online Security</a>&nbsp;
+			</li>
+			<li>© Copyright 2017. <a href="#" onclick="openPNCGroupWindow();return false;" title="The PNC Financial Services Group, Inc.">The PNC Financial Services Group, Inc.</a> All Rights Reserved.</li>
+			<li> 
+                
+    
+    
+    <!--<link rel="stylesheet" type="text/css" href="/css3/kendo/kendo.PNC-Custom.css">-->
+      	
+   	<div id="coBrowseModal" style="display:none">
+<div id="coBrowseModalContainer">  
+<div id="pncOverlay" class="mask"></div>
+<div id="coBrowseContainer"><div>&nbsp;<div class="coBrowseActions"><a href="#" class="coBrowseActionLink"><span class="coBrowseActionClose" id="coBrowseCloseButton">&nbsp;</span></a></div></div><div id="modalContent" tabindex="0">
+<div id="container">
+    <div class="logo_container">
+    </div>
+    <div id="slidshow_cont" style="height:379px; position:relative">
+        <div class="maintext" id="greeting">
+            <p>
+                <span style="font-size: 16px; font-family: arial,helvetica,sans-serif;">
+                    <strong>Welcome to PNC CoBrowse.&nbsp; We're here to help you!</strong>
+                </span>
+            </p>
+            <p>
+                <span style="font-size: 14px; font-family: arial,helvetica,sans-serif;">
+                    <strong>
+                        <br>
+                    </strong>
+                </span>
+            </p>
+            <p>
+                <span style="font-size: 14px; font-family: arial,helvetica,sans-serif;">You are just a few clicks away from, with your permission, a PNC Online Banking Consultant being able to assist you by browsing the site with you. </span>
+                <br><br>
+            </p>
+            <p>
+                <span style="font-family: arial,helvetica,sans-serif; font-size: 14px;">To share your screen, click the Accept and CoBrowse button below to generate a passcode. &nbsp;A PNC Online Banking Consultant will use the passcode to view your desktop. &nbsp;By clicking the Accept and CoBrowse button, you authorize us to view your current web session. &nbsp;You control the session and you can terminate it at any time by clicking the Disconnect button or by closing the browser window.</span>
+            </p>
+            <p>
+                <br>
+                </p>
+            <p>If you are not on the phone with a PNC Online Banking Consultant, and wish to utilize our CoBrowse service, please call 888-PNC-BANK <br><br><br><span style="font-size: 13px;"></span></p>
+        </div>
+        <a id="startButtonContainer" class="startButton" title="Accept and CoBrowse" style="display:none;padding-left:0px !important; padding-right:18px !important;">
+            <span id="startButton">Accept and CoBrowse</span>
+        </a>
+        <span id="pleaseWaitBlock" style="display:none;">Please wait...</span>
+        <div class="main_img" id="mainImage"></div>
+    </div>
+    <div id="details_cont">
+        <div style="margin:0px 20px;">
+            <div class="fLeft">
+                <div class="option">
+                    <a id="FAQURL" href="https://www.pnc.com/webapp/unsec/Solutions.do?siteArea=/pnccorp/PNC/Terms+and+Conditions" target="_blank">Terms and Conditions</a>
+                </div>
+            </div>
+            <div class="coverPhone fRight" style="width:250px; height:55px;" id="altGreeting">
+                <p style="text-align: left;"><span style="font-family: arial,helvetica,sans-serif; color: #000000;">Mon - Fri: 7am to 10pm ET</span><br><span style="font-family: arial,helvetica,sans-serif; color: #000000;">Sat - Sun: 8am to 5pm ET</span></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="privacypolicy">
+        <h4 id="privacyHeader">Your privacy is important to us</h4>
+        <div id="privacyText"><p><span style="font-family: arial,helvetica,sans-serif;">Co Browse is a secure service governed by our <a target="_blank" href="https://www.pnc.com/webapp/unsec/Solutions.do?siteArea=/pnccorp/PNC/Privacy+Policy">Privacy Policy.</a></span></p></div>
+    </div>
+</div>
+<br>
+<br></div></div></div>
+    </div>
+
+    <a id="launchCobrowse" href="#" class="cobrowseOutline" onclick="CoBrowse.launchCoBrowseModal()"><img src="/Images2/livelook/livelook.png" alt="PNC Cobrowse"></a>
+     
+    <script type="text/javascript" src="/CoBrowse/coBrowse.js"></script>
+
+    <script>
+        CoBrowse.setURL( 'https://ae6065fd8a3798e3245e-c4a713b3f5977f1ca3f067a9b02ebecc.ssl.cf2.rackcdn.com/llscripts//launcher.js?noCache=2017-09-19 08:39:10.993', 
+        'https://ae6065fd8a3798e3245e-c4a713b3f5977f1ca3f067a9b02ebecc.ssl.cf2.rackcdn.com/llscripts//fmset.js?noCache=2017-09-19 08:39:10.993');
+    </script>
+
+    <script>
+    	if( top.window.isCoBrowseRunning ) {
+    		document.write('<scr' +'ipt src="https://ae6065fd8a3798e3245e-c4a713b3f5977f1ca3f067a9b02ebecc.ssl.cf2.rackcdn.com/llscripts//launcher.js?noCache=2017-09-19 08:39:10.993" ></scr' + 'ipt>');
+    		document.write('<scr' +'ipt src="https://ae6065fd8a3798e3245e-c4a713b3f5977f1ca3f067a9b02ebecc.ssl.cf2.rackcdn.com/llscripts//fmset.js?noCache=2017-09-19 08:39:10.993" ></scr' + 'ipt>');
+    	}
+    </script>
+
+  
+			   <a href="/alservlet/ContactUsServlet">Need Help? View our Contact Numbers and Hours of Operation</a>
+			</li>
+			<li class="left">
+		
+			    <span class="version">
+
+
+</span> 
+			
+			        <a href="#" onclick="openSecurityWindow()" class="tipMe" title="Security is a priority at PNC. We are committed to protecting the security and confidentiality of your financial information. Click to learn more about how we protect you and how you can protect yourself."><img src="/Images2/wrapper/lock.png" alt="Lock Icon" class="lock"></a>
+			</li>
+			
+		</ul>
+		
+		<div class="clear"></div>
+
+	</div>
+</div>
